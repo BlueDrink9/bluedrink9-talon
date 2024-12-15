@@ -1,0 +1,7 @@
+list: user.special_key
+os: windows
+os: linux
+language: en
+-
+
+semi: ";"

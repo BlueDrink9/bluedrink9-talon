@@ -1,0 +1,81 @@
+list: user.letter
+language: en
+-
+# for common alternative spoken forms for letters, visit
+# https://talon.wiki/quickstart/improving_recognition_accuracy/#collected-alternatives-to-the-default-alphabet
+# air: a
+# bat: b
+# cap: c
+# drum: d
+# each: e
+# fine: f
+# gust: g
+# harp: h
+# sit: i
+# jury: j
+# crunch: k
+# look: l
+# made: m
+# near: n
+# odd: o
+# pit: p
+# quench: q
+# red: r
+# sun: s
+# trap: t
+# urge: u
+# vest: v
+# whale: w
+# plex: x
+# yank: y
+# zip: z
+
+air: a
+elf: a
+alph: a
+arch: a
+# batch: b
+# birch: b
+bill: b
+cap: c
+drum: d
+dump: d
+# Etch is picked up more reliably, but keep both e
+each: e
+etch: e
+fine: f
+gust: g
+ham: h
+ivy: i
+ice: i
+jail: j
+judge: j
+jane: j
+jury: j
+crunch: k
+little: l
+look: l
+made: m
+# met: m
+near: n
+neat: n
+# oink: o
+# orange: o
+odd: o
+pink: p
+# pet: p
+quench: q
+red: r
+# whale: w
+whip: w
+sun: s
+trap: t
+urge: u
+vest: v
+# whale: w
+plex: x
+yank: y
+zone: z
+zoo: z
+zip: z
+zed: z
