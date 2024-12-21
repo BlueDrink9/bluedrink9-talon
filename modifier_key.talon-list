@@ -6,3 +6,8 @@ language: en
 alter: alt
 control: ctrl
 troll: ctrl
+shift: shift
+# super is the windows key
+super: super
+command: ctrl
+option: alt
