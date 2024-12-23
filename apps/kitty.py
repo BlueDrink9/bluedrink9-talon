@@ -39,17 +39,16 @@ class EditActions:
 
 @ctx.action_class("user")
 class UserActions:
+    pattern = re.compile(r'\[([^\[\]]+)\](?=[^\[\]]*$)')
     def file_manager_current_path():
         path = ui.active_window().title
 
-        pattern = re.compile(r'\[([^\[\]]+)\](?=[^\[\]]*$)')
-
-        match = pattern.search(path)
+        match = UserActions.pattern.search(path)
 
         if match:
             path = match.group(1)
         else:
-            return
+            return ""
 
         if path in directories_to_remap:
             path = directories_to_remap[path]
