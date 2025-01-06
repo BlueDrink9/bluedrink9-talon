@@ -9,9 +9,12 @@ mod.list("bspwm_noun", desc="BSPWM nouns")
 mod.list("bspwm_direction", desc="BSPWM directions")
 
 ctx.lists["user.bspwm_verb"] = {
-    "go": "go",
-    "move": "move",
-    "swap": "swap",
+    "go": "--focus",
+    "move to monitor": "--to-monitor",
+    "swap": "--swap",
+    "close": "--close",
+    "kill": "--kill",
+    "remove": "--remove",
 }
 ctx.lists["user.bspwm_noun"] = {
     "workspace": "desktop",
@@ -32,14 +35,6 @@ ctx.lists["user.bspwm_direction"] = {
     # TODO: maybe convert this to a capture so use actual user.numbers.
     # As-is, this tries to read utterance "1", which is nonsence.
 } | numbers
-
-# Verb to bspc command mapping
-verbs = {
-    "go": "--focus",
-    "swap": "--swap",
-    "move to monitor": "--to-monitor",
-    # "move": "--move",
-}
 
 # Direction mappings
 direction_mappings = {
@@ -66,6 +61,7 @@ resize_actions = {
 
 def bspc_command(*args: str):
     """Execute a bspc command."""
+    args = [item for item in args if item not in [""]]
     result = subprocess.run(["bspc", *args], capture_output=True)
     if result.stderr:
         raise subprocess.CalledProcessError(
@@ -80,13 +76,8 @@ def bspc_command(*args: str):
 @mod.action_class
 class Actions:
 
-    def bspwm_action(verb: str, noun: str, selector: str):
+    def bspwm_action(command: str, noun: str, selector: str):
         """Handle a generic bspwm action."""
-        command = verbs.get(verb)
-        if not command:
-            app.notify(f"Unknown verb: {verb}")
-            return
-
         # Handle numbers (e.g., workspace 1, monitor 2)
         if selector.isdigit():
             if noun == "workspace":
@@ -104,8 +95,9 @@ class Actions:
             bspc_command(noun, command, mapped_param)
 
         # Handle swap or resize actions
-        elif verb == "resize" and selector in resize_actions:
+        elif command == "resize" and selector in resize_actions:
             action, amount = resize_actions[selector]
             bspc_command(noun, command, action, amount)
+
         else:
-            app.notify(f"Unknown parameter: {selector}")
+            bspc_command(noun, command, selector)
