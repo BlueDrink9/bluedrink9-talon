@@ -5,9 +5,9 @@ from talon import Context, Module, actions, ui
 
 ctx = Context()
 mod = Module()
-ctx.matches = r"""
-app: kitty
-"""
+# ctx.matches = r"""
+# app: kitty
+# """
 
 user_path = os.path.expanduser("~")
 directories_to_remap = {}
