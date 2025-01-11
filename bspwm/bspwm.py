@@ -18,6 +18,7 @@ ctx.lists["user.bspwm_verb"] = {
 }
 ctx.lists["user.bspwm_noun"] = {
     "workspace": "desktop",
+    "desk": "desktop",
     "node": "node",
     "window": "node",
     "monitor": "monitor",

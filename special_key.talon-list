@@ -20,9 +20,10 @@ escape: escape
 space: space
 tab: tab
 insert: insert
+backspace: backspace
 wipe: backspace
-delete: backspace
-forward delete: delete
+scratch: backspace
+delete: delete
 menu key: menu
 print screen: printscr
 
