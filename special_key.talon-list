@@ -25,9 +25,16 @@ wipe: backspace
 scratch: backspace
 delete: delete
 menu key: menu
+apps key: menu
+menu: menu
 print screen: printscr
 
 up: up
 down: down
 left: left
 right: right
+
+lend: (
+rend: )
+face: }
+rare: ]
