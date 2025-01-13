@@ -5,6 +5,7 @@ mod = Module()
 ctx = Context()
 
 mod.list("bspwm_verb", desc="BSPWM verbs")
+mod.list("bspwm_node_change", desc="BSPWM verbs for changing node states")
 mod.list("bspwm_noun", desc="BSPWM nouns")
 mod.list("bspwm_direction", desc="BSPWM directions")
 
@@ -15,6 +16,10 @@ ctx.lists["user.bspwm_verb"] = {
     "close": "--close",
     "kill": "--kill",
     "remove": "--remove",
+}
+ctx.lists["user.bspwm_node_change"] = {
+    "full screen": "-t fullscreen",
+    "tile": "-t tiled",
 }
 ctx.lists["user.bspwm_noun"] = {
     "workspace": "desktop",
@@ -63,6 +68,7 @@ resize_actions = {
 def bspc_command(*args: str):
     """Execute a bspc command."""
     args = [item for item in args if item not in [""]]
+    args = " ".join(args).split(" ")
     result = subprocess.run(["bspc", *args], capture_output=True)
     if result.stderr:
         raise subprocess.CalledProcessError(
@@ -76,6 +82,9 @@ def bspc_command(*args: str):
 
 @mod.action_class
 class Actions:
+    def bspwm_node_change_action(command: str, noun: str):
+        """Handle actions that just affect the node with no direction"""
+        bspc_command(noun, command)
 
     def bspwm_action(command: str, noun: str, selector: str):
         """Handle a generic bspwm action."""
