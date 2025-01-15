@@ -5,6 +5,7 @@ mod.list("my_symbol_key", desc="extra symbol keys")
 
 ctx = Context()
 ctx.lists["user.my_symbol_key"] = {
+    "semi": ";",
     "lend": "(",
     "rend": ")",
     "face": "}",

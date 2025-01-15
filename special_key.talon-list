@@ -2,13 +2,8 @@ list: user.special_key
 language: en
 -
 
-semi: ";"
-scratch: backspace
-scrat: backspace
-scrit: backspace
-esk: escape
-# drowse: talon sleep
-pace: space
+# esk: escape
+drowse: talon sleep
 
 end: end
 home: home
