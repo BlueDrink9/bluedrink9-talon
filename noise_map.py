@@ -30,11 +30,10 @@ def on_pop(active):
 # script cursor scrolling while hissing
 from talon import ctrl, noise, cron
 from time import sleep, time
-from user.knausj_talon.code.mouse import start_cursor_scrolling, stop_scroll
 
 start = 0
 running = False
-noise_length_threshold = "500ms"
+noise_length_threshold = "300ms"
 threshold_passed = False
 
 def still_running():
@@ -42,7 +41,7 @@ def still_running():
     global threshold_passed
     if running:
         threshold_passed = True
-        start_cursor_scrolling()
+        actions.user.mouse_scroll_down_continuous()
         print('hiss duration passed threshold, starting gaze scroll')
 
 def cursor_scroll_on_hiss(is_active):
@@ -57,7 +56,7 @@ def cursor_scroll_on_hiss(is_active):
     running = False
     if threshold_passed:
         threshold_passed = False
-        stop_scroll()
+        actions.user.mouse_scroll_stop()
         print('end of hiss detected, disabling gaze scroll')
 
 
