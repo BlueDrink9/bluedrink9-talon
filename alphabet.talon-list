@@ -40,11 +40,15 @@ bill: b
 cap: c
 drum: d
 dump: d
+dave: d
 # Etch is picked up more reliably, but keep both e
 each: e
 etch: e
+# east: e
+eve: e
 fine: f
 gust: g
+grace: g
 ham: h
 ivy: i
 ice: i
@@ -53,6 +57,7 @@ judge: j
 jane: j
 jury: j
 crunch: k
+kale: k
 little: l
 look: l
 made: m
@@ -62,20 +67,25 @@ neat: n
 # oink: o
 # orange: o
 odd: o
+ox: o
 pink: p
+pete: p
 # pet: p
 quench: q
 red: r
 sun: s
 trap: t
+tee: t
 urge: u
+ute: u
 vest: v
 # whale: w
 # whale: w
-whip: w
+# whip: w
 wife: w
 plex: x
-yank: y
+# yank: y
+yoke: y
 zone: z
 zoo: z
 zip: z
