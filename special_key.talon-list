@@ -33,8 +33,3 @@ up: up
 down: down
 left: left
 right: right
-
-lend: (
-rend: )
-face: }
-rare: ]
