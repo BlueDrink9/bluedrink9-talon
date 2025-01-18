@@ -7,6 +7,7 @@ settings():
     user.subtitles_show = true
     user.subtitles_size = 70
     user.subtitles_y = 0.75
+    user.double_pop_speed_maximum = 0.5
     user.subtitles_screens = "focus"
     user.subtitles_timeout_per_char = 80
     # user.mouse_enable_hiss_scroll = true

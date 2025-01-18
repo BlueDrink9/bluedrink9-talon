@@ -9,15 +9,18 @@ end: end
 home: home
 minus: minus
 enter: enter
+clap: enter
 page down: pagedown
 page up: pageup
 escape: escape
+put: space
 space: space
 tab: tab
 insert: insert
 backspace: backspace
 wipe: backspace
 scratch: backspace
+junk: backspace
 delete: delete
 menu key: menu
 apps key: menu
