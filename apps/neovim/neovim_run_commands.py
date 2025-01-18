@@ -6,7 +6,11 @@ VimAPI = import_module(".neovim-talon.core.rpc.api", package="user").VimAPI
 VimMod = import_module(".neovim-talon.core.rpc.modes", package="user").VimMode
 
 mod = Module()
-
+from talon import Context
+ctx = Context()
+ctx.matches = ctx.matches + """
+language: en
+"""
 
 @mod.action_class
 class Actions:
