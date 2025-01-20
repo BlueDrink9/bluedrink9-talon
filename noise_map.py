@@ -28,7 +28,7 @@
 # noise.register("hiss", hiss_handler)
 # noise.register("pop", on_pop)
 # script cursor scrolling while hissing
-from talon import ctrl, noise, cron
+from talon import actions, ctrl, noise, cron
 from time import sleep, time
 
 start = 0
