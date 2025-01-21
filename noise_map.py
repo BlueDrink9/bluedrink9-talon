@@ -33,16 +33,16 @@ from time import sleep, time
 
 start = 0
 running = False
-noise_length_threshold = "300ms"
+noise_length_threshold = 500 # ms
 threshold_passed = False
 
 def still_running():
     global running
     global threshold_passed
     if running:
+        print('hiss duration passed threshold, starting gaze scroll')
         threshold_passed = True
         actions.user.mouse_scroll_down_continuous()
-        print('hiss duration passed threshold, starting gaze scroll')
 
 def cursor_scroll_on_hiss(is_active):
   global start
@@ -50,14 +50,21 @@ def cursor_scroll_on_hiss(is_active):
   global threshold_passed
   if is_active:
     start = time()
-    running = True
-    cron.after(noise_length_threshold, still_running)
+    # Only if this is a continuous hiss. If already running the timer,
+    # don't start a new one.
+    if not running:
+      running = True
+      # Monitor for continuous hissing. Each hiss will keep running this
+      # function.
+      # for interval in range(100, noise_length_threshold, 100):
+      for interval in [noise_length_threshold]:
+        cron.after(str(interval) + "ms", still_running)
   else:
     running = False
     if threshold_passed:
+        print('end of hiss detected, disabling gaze scroll')
         threshold_passed = False
         actions.user.mouse_scroll_stop()
-        print('end of hiss detected, disabling gaze scroll')
 
 
 noise.register('hiss', cursor_scroll_on_hiss)
