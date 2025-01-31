@@ -1,3 +1,4 @@
 equalses: "=="
+assign: " = "
 arrpipe: "%>%"
 arrpipes: "%<>%"

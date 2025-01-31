@@ -30,10 +30,10 @@ language: en
 # yank: y
 # zip: z
 
-air: a
+# air: a
 elf: a
 alph: a
-arch: a
+# arch: a
 # batch: b
 # birch: b
 bill: b
@@ -63,7 +63,7 @@ look: l
 made: m
 # met: m
 near: n
-neat: n
+# neat: n
 # oink: o
 # orange: o
 odd: o
@@ -86,6 +86,7 @@ wife: w
 plex: x
 # yank: y
 yoke: y
+white: y
 zone: z
 zoo: z
 zip: z
