@@ -11,6 +11,8 @@ ctx.lists["user.my_symbol_key"] = {
     "rend": ")",
     "face": "}",
     "rare": "]",
+    "pair": "\"",
+    "peer": "\"",
 }
 
 @ctx.capture("user.symbol_key", rule="{user.symbol_key} | {user.my_symbol_key}")

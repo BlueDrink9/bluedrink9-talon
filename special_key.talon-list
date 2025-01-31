@@ -12,6 +12,8 @@ enter: enter
 clap: enter
 page down: pagedown
 page up: pageup
+# Pair with hiss to go down
+page: pageup
 escape: escape
 put: space
 space: space
@@ -31,3 +33,4 @@ up: up
 down: down
 left: left
 right: right
+high: up
