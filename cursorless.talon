@@ -8,3 +8,7 @@ tag: user.cursorless
 change <user.cursorless_target>:
     user.cursorless_command("clearAndSetSelection", cursorless_target)
     user.run_rpc_command("vscode-neovim.lua", "vim.cmd('startinsert')")
+
+# Allow formatting targets
+<user.formatters> <user.cursorless_target>:
+    user.cursorless_reformat(cursorless_target, formatters)
