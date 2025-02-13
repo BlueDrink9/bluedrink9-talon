@@ -1,4 +1,4 @@
 equalses: "=="
 assign: " = "
-arrpipe: "%>%"
-arrpipes: "%<>%"
+arr pipe: "%>%"
+arr pipes: "%<>%"

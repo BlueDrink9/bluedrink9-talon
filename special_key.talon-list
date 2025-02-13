@@ -24,6 +24,7 @@ wipe: backspace
 scratch: backspace
 junk: backspace
 delete: delete
+drill: delete
 menu key: menu
 apps key: menu
 menu: menu
