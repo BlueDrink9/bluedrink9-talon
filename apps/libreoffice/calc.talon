@@ -2,16 +2,17 @@ app: libre_office
 -
 
 go <user.letter> <user.number_string>:
-    # Open navigator
-    key(alt-v v)
-    sleep(50ms)
+    # Open navigator sidebar
+    key(alt-4)
+    sleep(20ms)
     # Delete existing letters
     key(ctrl-delete)
     insert(letter)
     key(tab tab)
     insert(number_string)
     key(enter)
-    key(escape)
+    # Close sidebar
+    key(ctrl-f5)
 
 Reload it: key(alt-f l)
 filter all: key(ctrl-shift-l)
