@@ -13,6 +13,9 @@ ctx.lists["user.my_symbol_key"] = {
     "rare": "]",
     "pair": "\"",
     "peer": "\"",
+    "double": "\"",
+    "dub": "\"",
+    "single": "'",
 }
 
 @ctx.capture("user.symbol_key", rule="{user.symbol_key} | {user.my_symbol_key}")

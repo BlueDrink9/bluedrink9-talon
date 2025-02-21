@@ -1,4 +1,13 @@
 equalses: "=="
 assign: " = "
+ah pipe: "%>%"
+ah pipes: "%<>%"
 arr pipe: "%>%"
 arr pipes: "%<>%"
+op pipe: "%>%"
+op pipes: "%<>%"
+stat pipe: "%>%"
+stat pipes: "%<>%"
+# Magrittr pipes
+mag pipe: "%>%"
+mag pipes: "%<>%"

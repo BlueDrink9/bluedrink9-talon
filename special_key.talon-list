@@ -35,3 +35,7 @@ down: down
 left: left
 right: right
 high: up
+north: up
+south: down
+west: left
+east: right

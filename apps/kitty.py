@@ -5,9 +5,16 @@ from talon import Context, Module, actions, ui
 
 ctx = Context()
 mod = Module()
-# ctx.matches = r"""
-# app: kitty
-# """
+
+# TODO: find and add OSX matcher
+mod.apps.kitty = r"""
+os: linux
+and app.name: kitty
+"""
+
+ctx.matches = r"""
+app: kitty
+"""
 
 user_path = os.path.expanduser("~")
 directories_to_remap = {}

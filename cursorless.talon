@@ -12,3 +12,11 @@ change <user.cursorless_target>:
 # Allow formatting targets
 <user.formatters> <user.cursorless_target>:
     user.cursorless_reformat(cursorless_target, formatters)
+
+# Evaluate in debug console
+bug run <user.cursorless_target>:
+    user.cursorless_ide_command("editor.debug.action.selectionToRepl", cursorless_target)
+
+# TODO: gate by language.
+code run <user.cursorless_target>:
+    user.cursorless_ide_command("r.runSelection", cursorless_target)

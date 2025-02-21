@@ -1,13 +1,13 @@
 app: libre_office
 -
 
-go <user.letter> <user.number_string>:
+go <user.letters> <user.number_string>:
     # Open navigator sidebar
     key(alt-4)
     sleep(20ms)
     # Delete existing letters
     key(ctrl-delete)
-    insert(letter)
+    insert(letters)
     key(tab tab)
     insert(number_string)
     key(enter)
@@ -25,6 +25,8 @@ freeze top row: key(alt-v c r)
 freeze first column: key(alt-v c f)
 select visible columns: key(alt-e e o)
 select visible rows: key(alt-e e v)
+sort ascending: key(alt-d a)
+sort descending: key(alt-d i)
 
 edit: key(f2)
 
@@ -93,6 +95,8 @@ screen right:
     key(alt-pgdown)
 
 # taken from excel shortcuts
+edit: key(f2)
+complete: key(alt-down)
 column select: key(ctrl-space)
 column insert: key(ctrl-space ctrl-shift-=)
 column delete: key(ctrl-space ctrl--)
@@ -117,3 +121,5 @@ sheet new: key(shift-f11)
 sheet previous: key(ctrl-pageup)
 sheet next: key(ctrl-pagedown)
 sheet rename: key(alt-h o r)
+
+paste special: key(ctrl-alt-v)
