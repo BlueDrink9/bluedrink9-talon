@@ -18,7 +18,54 @@ Reload it: key(alt-f l)
 filter all: key(ctrl-shift-l)
 filter this: key(alt-down)
 filter change: key(alt-down)
+filter column to <user.text>:
+    key(escape)
+    key(ctrl-up:10)
+    key(alt-down)
+    # Toggle 'all' to blank
+    key(alt-a)
+    # Focus list
+    key(tab:4)
+    # Jump to text
+    insert(text)
+    key(space)
+    # Ok
+    key(alt-o)
+
+filter column except <user.text>:
+    key(escape)
+    key(ctrl-up:10)
+    key(alt-down)
+    # # Toggle 'all' to blank
+    # key(alt-a)
+    # Focus list
+    key(tab:4)
+    # Jump to text
+    insert(text)
+    key(space)
+    # Ok
+    key(alt-o)
+
+filter column except empty:
+    key(escape)
+    key(ctrl-up:10)
+    key(alt-down)
+    # # Toggle 'all' to blank
+    # key(alt-a)
+    # Focus list
+    key(tab:4)
+    # Jump to text
+    insert("(empty)")
+    key(space)
+    # Ok
+    key(alt-o)
+
+
+
 delete cells: key(ctrl--)
+delete row: key(alt-s u)
+delete column: key(alt-s o)
+
 insert cells: key(ctrl-+)
 column hide: key(alt-o m h)
 freeze top row: key(alt-v c r)
@@ -95,9 +142,9 @@ screen right:
     key(alt-pgdown)
 
 # taken from excel shortcuts
-edit: key(f2)
 complete: key(alt-down)
 column select: key(ctrl-space)
+column copy: key(escape ctrl-space ctrl-c)
 column insert: key(ctrl-space ctrl-shift-=)
 column delete: key(ctrl-space ctrl--)
 column top: key(ctrl-up)
@@ -107,7 +154,12 @@ column filter: key(ctrl-down ctrl-up alt-down)
 column width: key(alt-h o w)
 
 row select: key(shift-space)
+row copy: key(escape shift-space ctrl-c)
 row insert: key(shift-space ctrl-shift-=)
+insert row below: key(alt-s r b)
+insert row above: key(alt-s r a)
+insert column left: key(alt-s r b)
+insert column right: key(alt-s r a)
 row delete: key(shift-space ctrl--)
 row start: key(ctrl-left)
 row end: key(ctrl-right)
@@ -123,3 +175,4 @@ sheet next: key(ctrl-pagedown)
 sheet rename: key(alt-h o r)
 
 paste special: key(ctrl-alt-v)
+paste transposed: key(alt-e s t)
