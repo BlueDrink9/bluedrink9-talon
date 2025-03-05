@@ -12,8 +12,8 @@ settings():
     user.subtitles_timeout_per_char = 80
     user.double_pop_speed_maximum = 0.5
     user.mouse_enable_hiss_scroll = true
-    user.mouse_continuous_scroll_amount = 6
-    user.hiss_scroll_debounce_time = 300
+    # user.mouse_continuous_scroll_amount = 6
+    user.hiss_scroll_debounce_time = 400
     # Reduce flakiness when multiple keys being pressed.
     key_hold = 15
     insert_wait = 5
