@@ -9,5 +9,9 @@ send selection: insert(" s")
 
 over: ""
 
-coda: mimic("focus codium")
+cody |coda | coder: mimic("focus codium")
 foxy: mimic("focus firefox")
+kitty: mimic("focus kitty")
+
+scout: mimic("find it")
+jetpack | hunty | hunter: mimic("file hunt")

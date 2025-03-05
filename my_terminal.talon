@@ -1,4 +1,5 @@
 tag: terminal
+language: en
 -
 tag(): user.generic_unix_shell
 # Say "core" before command:
@@ -13,3 +14,6 @@ clear word left: key(ctrl-w)
 clear line: key(ctrl-u)
 complete: key(ctrl-e)
 cancel [that]: key(ctrl-c)
+# Clear line, exit scrollbacks etc, before running last
+rerun last:
+    key(ctrl-c:2 up enter)
