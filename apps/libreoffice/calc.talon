@@ -18,8 +18,9 @@ Reload it: key(alt-f l)
 filter all: key(ctrl-shift-l)
 filter this: key(alt-down)
 filter change: key(alt-down)
-filter column to <user.text>:
+filter [column|this] to [just|only] (<user.text>|empty):
     key(escape)
+    # Ensure we are at the top of the column
     key(ctrl-up:10)
     key(alt-down)
     # Toggle 'all' to blank
@@ -27,40 +28,25 @@ filter column to <user.text>:
     # Focus list
     key(tab:4)
     # Jump to text
-    insert(text)
+    insert(text or "(empty)")
     key(space)
     # Ok
     key(alt-o)
 
-filter column except <user.text>:
+filter [column|this] [except|to not] (<user.text>|empty):
     key(escape)
+    # Ensure we are at the top of the column
     key(ctrl-up:10)
-    key(alt-down)
+    key(alt-downs
     # # Toggle 'all' to blank
     # key(alt-a)
     # Focus list
     key(tab:4)
     # Jump to text
-    insert(text)
+    insert(text or "(empty)")
     key(space)
     # Ok
     key(alt-o)
-
-filter column except empty:
-    key(escape)
-    key(ctrl-up:10)
-    key(alt-down)
-    # # Toggle 'all' to blank
-    # key(alt-a)
-    # Focus list
-    key(tab:4)
-    # Jump to text
-    insert("(empty)")
-    key(space)
-    # Ok
-    key(alt-o)
-
-
 
 delete cells: key(ctrl--)
 delete row: key(alt-s u)
