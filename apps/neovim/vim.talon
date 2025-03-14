@@ -7,3 +7,8 @@ and not tag: user.vim_mode_command
 file local edit [<user.text>]:
     user.vim_run_command_exterm(";le ")
     insert(user.text or "")
+
+code this:
+    key(escape)
+    insert(";!codium %")
+    key(enter)

@@ -17,3 +17,5 @@ cancel [that]: key(ctrl-c)
 # Clear line, exit scrollbacks etc, before running last
 rerun last:
     key(ctrl-c:2 up enter)
+code: "code "
+editor | edd: "e "
