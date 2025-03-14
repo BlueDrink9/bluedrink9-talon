@@ -100,11 +100,11 @@ null: 0
 one: 1
 two: 2
 three: 3
-tree: 3
+# tree: 3
 four: 4
 fife: 5
 five: 5
-sex: 6
+# sex: 6
 six: 6
 seven: 7
 eight: 8
