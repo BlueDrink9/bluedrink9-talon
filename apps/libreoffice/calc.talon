@@ -37,7 +37,7 @@ filter [column|this] [except|to not] (<user.text>|empty):
     key(escape)
     # Ensure we are at the top of the column
     key(ctrl-up:10)
-    key(alt-downs
+    key(alt-down)
     # # Toggle 'all' to blank
     # key(alt-a)
     # Focus list
