@@ -16,3 +16,5 @@ kitty: mimic("focus kitty")
 
 scout: mimic("find it")
 jetpack | hunty | hunter: mimic("file hunt")
+brightness max: user.system_command("ddcutil setvcp 10 100")
+brightness set <number>: user.system_command("ddcutil setvcp 10 {number}")

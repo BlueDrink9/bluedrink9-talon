@@ -10,6 +10,7 @@ home: home
 minus: minus
 enter: enter
 clap: enter
+lap: enter
 page down: pagedown
 page up: pageup
 # Pair with hiss to go down
