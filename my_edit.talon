@@ -15,3 +15,4 @@ swallow:
 billy: edit.word_left()
 willie: edit.word_right()
 pasty: edit.paste()
+yankee: edit.copy()

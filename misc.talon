@@ -9,6 +9,7 @@ send selection: insert(" s")
 
 over: ""
 big clap: key(ctrl-enter)
+clapper: key(ctrl-enter)
 
 cody |coda | coder: mimic("focus codium")
 foxy: mimic("focus firefox")
