@@ -2,7 +2,8 @@ list: user.phrase_ender
 language: en
 -
 
-over: ""
+# Prefer a made up word to "over" because otherwise you can't say "over" during a sentence
+meep: ""
 spacer: " "
 comma: ", "
 dotter: ". "
