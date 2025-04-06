@@ -8,8 +8,10 @@ send (that|it): insert(" ss")
 send selection: insert(" s")
 
 over: ""
+meep: ""
 big clap: key(ctrl-enter)
 clapper: key(ctrl-enter)
+pinger: key(ctrl-enter)
 
 cody |coda | coder: mimic("focus codium")
 foxy: mimic("focus firefox")
