@@ -3,6 +3,7 @@ language: en
 -
 # for common alternative spoken forms for letters, visit
 # https://talon.wiki/quickstart/improving_recognition_accuracy/#collected-alternatives-to-the-default-alphabet
+# https://blakewatson.com/journal/speaking-in-code-hands-free-input-with-talon/
 # air: a
 # bat: b
 # cap: c
@@ -67,11 +68,12 @@ near: n
 # orange: o
 odd: o
 ox: o
-pink: p
+# pink: p
 pete: p
 # pet: p
 quench: q
-red: r
+# red: r
+ray: r
 sun: s
 trap: t
 tee: t
@@ -81,13 +83,16 @@ ute: u
 vest: v
 vent: v
 # whale: w
-# whale: w
 # whip: w
-wife: w
+# wife: w
+# wine: w
+wave: w
+wet: w
 plex: x
 # yank: y
 yoke: y
-white: y
+# white: y
+wine: y
 zone: z
 zoo: z
 zip: z
