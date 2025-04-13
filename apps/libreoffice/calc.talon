@@ -18,6 +18,11 @@ Reload it: key(alt-f l)
 filter all: key(ctrl-shift-l)
 filter this: key(alt-down)
 filter change: key(alt-down)
+filter clear:
+    key(alt-down)
+    key(shift-tab)
+    insert("clear")
+    key(enter)
 filter [column|this] to [just|only] (<user.text>|empty):
     key(escape)
     # Ensure we are at the top of the column
