@@ -13,10 +13,13 @@ clap: enter
 ping: enter
 lap: enter
 page down: pagedown
+dunk: pagedown
 page up: pageup
+peck: pageup
 # Pair with hiss to go down
 page: pageup
 escape: escape
+zap: escape
 put: space
 space: space
 tab: tab
@@ -38,6 +41,7 @@ left: left
 right: right
 high: up
 north: up
+nord: up
 south: down
 west: left
 east: right
