@@ -12,3 +12,7 @@ bar variables:
     key(down)
 termy: user.vscode_and_wait("workbench.action.terminal.toggleTerminal")
 complete: key(ctrl-e)
+run last:
+    edit.save()
+    # Up + enter
+    user.terminal_send("\u001b[A\u000d")
