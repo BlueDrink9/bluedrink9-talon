@@ -1,0 +1,11 @@
+list: user.search_engine
+language: en
+-
+amazon: https://www.amazon.com/s/?field-keywords=%s
+duck: https://duckduckgo.com/?q=%s
+pydocs: https://docs.python.org/3/search.html?q=%s
+arrdocs: https://www.rdocumentation.org/search?q=%s
+google: https://www.google.com/search?q=%s
+google map: https://maps.google.com/maps?q=%s
+scholar: https://scholar.google.com/scholar?q=%s
+wiki: https://en.wikipedia.org/w/index.php?search=%s
