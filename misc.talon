@@ -7,7 +7,10 @@ send (that|it): insert(" ss")
 
 send selection: insert(" s")
 
-over: ""
+beat: sleep(1)
+
+tut: ""
+mawp: ""
 meep: ""
 big clap: key(ctrl-enter)
 clapper: key(ctrl-enter)
@@ -17,7 +20,8 @@ cody |coda | coder: mimic("focus codium")
 foxy: mimic("focus firefox")
 kitty: mimic("focus kitty")
 
-scout: mimic("find it")
-jetpack | hunty | hunter: mimic("file hunt")
+# scout [<user.text>]: mimic("find it" + " {text or ''}")
+# (jetpack | hunty | hunter) [<user.text>]: mimic("file hunt " + (text or ""))
+
 brightness max: user.system_command("ddcutil setvcp 10 100")
 brightness set <number>: user.system_command("ddcutil setvcp 10 {number}")

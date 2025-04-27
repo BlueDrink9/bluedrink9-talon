@@ -23,6 +23,7 @@ ctx.lists["user.my_symbol_key"] = {
     "furl": "}",
     "face": "}",
     "bock": "[",
+    "lock": "[",
     "rock": "]",
     "rare": "]",
     "double": "\"",

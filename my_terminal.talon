@@ -7,7 +7,7 @@ tag(): user.generic_unix_shell
 tag(): user.unix_utilities
 tag(): user.git
 # tag(): user.kubectl
-tag(): user.readline
+tag(): user.readline_vi
 
 terminate: key(ctrl-c)
 clear word left: key(ctrl-w)
@@ -19,3 +19,7 @@ rerun last:
     key(ctrl-c:2 up enter)
 code: "code "
 editor | edd: "e "
+
+dvc: "dvc "
+dvc status: "dvc status\n"
+dvc add: "dvc add "
