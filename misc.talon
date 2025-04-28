@@ -10,15 +10,13 @@ send selection: insert(" s")
 beat: sleep(1)
 
 tut: ""
-mawp: ""
-meep: ""
 big clap: key(ctrl-enter)
 clapper: key(ctrl-enter)
 pinger: key(ctrl-enter)
 
-cody |coda | coder: mimic("focus codium")
-foxy: mimic("focus firefox")
-kitty: mimic("focus kitty")
+cody |coda | coder: user.switcher_focus("Codium")
+foxy: user.switcher_focus("firefox")
+kitty: user.switcher_focus("kitty")
 
 # scout [<user.text>]: mimic("find it" + " {text or ''}")
 # (jetpack | hunty | hunter) [<user.text>]: mimic("file hunt " + (text or ""))
