@@ -24,6 +24,7 @@ ctx.lists["user.my_symbol_key"] = {
     "face": "}",
     "bock": "[",
     "lock": "[",
+    "lair": "[",
     "rock": "]",
     "rare": "]",
     "double": "\"",
