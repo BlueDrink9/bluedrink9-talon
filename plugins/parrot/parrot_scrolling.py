@@ -33,12 +33,7 @@ class Scrolling:
         self.debounce_start_duration = 0.0
         self.debounce_stop_duration = 0.170
         self.scroll_stop_soft_callbacks = []
-
-        power_scale_target_lines = 20
-        self.__power_scale_target_coef = (
-            (power_scale_target_lines - 1) /
-                math.log(settings.get("user.parrot_mouse_scroll_power_scale"))
-        )
+        self.__power_scale_target_coef = None
 
     def scroll_start(self, direction: str, power: float = 1):
         """Start scrolling until stop is called"""
@@ -110,6 +105,12 @@ class Scrolling:
         self.scroll_stop_soft_callbacks.clear()
 
     def _scale_power(self):
+        if not self.__power_scale_target_coef:
+            power_scale_target_lines = 20
+            self.__power_scale_target_coef = (
+                (power_scale_target_lines - 1) /
+                    math.log(settings.get("user.parrot_mouse_scroll_power_scale"))
+            )
         return (
             self.__power_scale_target_coef * math.log(self.noise_power) + 1
         )
