@@ -70,6 +70,10 @@ parrot_patterns = {
     "guttural_ach": {
         "sounds": ["voiceless velar fricative"],
         "threshold": {">probability": 0.95},
+        "throttle": {
+            "cluck": 0.1,
+            "voiceless velar fricative": 0.5,
+        },
     },
 
     "voiced_th": {
