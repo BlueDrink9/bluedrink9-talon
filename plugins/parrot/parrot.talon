@@ -19,27 +19,31 @@ parrot(gutteral_ach):
 
 parrot(shush:repeat):
 	print("shush {power}")
-    user.mouse_scroll_up(0)
-    user.mouse_scroll_up(power * 0.05)
-    # user.mouse_scroll_up_continuous()
-
-# parrot(shush:stop):
-#     user.scroll_stop_soft()
+    user.scroll("up", power)
 
 parrot(hiss:repeat):
 	print("hiss {power}")
-    user.mouse_scroll_down(0)
-    user.mouse_scroll_down(power * 0.01)
-
-parrot(unvoiced_th:repeat):
-	print("unvoiced_th {power}")
-    user.mouse_scroll_left(0)
-    user.mouse_scroll_left(power * 0.01)
+    user.scroll("down", power)
 
 parrot(voiced_th:repeat):
 	print("voiced_th {power}")
-    user.mouse_scroll_right(0)
-    user.mouse_scroll_right(power * 0.01)
+    user.scroll("right", power)
+
+parrot(unvoiced_th:repeat):
+	print("unvoiced_th {power}")
+    user.scroll("left", power)
+
+parrot(shush:stop):
+    user.scroll_stop_soft()
+
+parrot(hiss:stop):
+    user.scroll_stop_soft()
+
+parrot(voiced_th:stop):
+    user.scroll_stop_soft()
+
+parrot(unvoiced_th:stop):
+    user.scroll_stop_soft()
 
 # parrot(hiss:stop):
 #     user.mouse_scroll_stop()

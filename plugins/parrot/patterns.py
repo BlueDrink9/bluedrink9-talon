@@ -3,7 +3,12 @@ from talon import settings
 parrot_patterns = {
     "alveolar_click": {
         "sounds": ["alveolar_click"],
-        "threshold": {">power": 1, ">probability": 0.95},
+        "threshold": {
+            ">power": 1,
+            ">probability": 0.95,
+            # Distinguish against hiss
+            "<f2": 4000,
+        },
         # "throttle": {"alveolar_click": 0.12, "pop": 0.2},
     },
     "cluck": {
@@ -14,7 +19,7 @@ parrot_patterns = {
 
     "shush": {
         "sounds": ["shh"],
-        "threshold": {">probability": 0.90},
+        "threshold": {">probability": 0.80},
         # "graceperiod": 0.1,
         # "grace_threshold": {">power": 5, ">probability": 0.4},
         "detect_after": 0.1,
@@ -24,7 +29,7 @@ parrot_patterns = {
 
     "hiss": {
         "sounds": ["hiss"],
-        "threshold": {">probability": 0.9},
+        "threshold": {">probability": 0.80},
         # "detect_after": settings.get('user.hiss_scroll_debounce_time')/1000,
         "detect_after": 0.1,
         # "graceperiod": 0.1,
@@ -42,9 +47,24 @@ parrot_patterns = {
         "threshold": {">probability": 0.95},
     },
 
-    "unaspirated_t": {
+    "unaspirated_t_stop": {
         "sounds": ["unaspirated voiceless alveolar stop"],
-        "threshold": {">probability": 0.95},
+        "threshold": {
+            ">probability": 0.95,
+            # Distinguish against hiss
+            "<f2": 4000,
+            "<f0": 500,
+        },
+    },
+
+    "aspirated_t": {
+        "sounds": ["aspirated voiceless alveolar stop"],
+        "threshold": {
+            ">probability": 0.95,
+            # Distinguish against hiss
+            "<f2": 4000,
+            "<f0": 500,
+        },
     },
 
     "guttural_ach": {
@@ -110,6 +130,10 @@ parrot_patterns = {
 
 parrot_patterns["speech"] = {
         "sounds": ["speech"],
-        "threshold": {">probability": 0.80},
+        "threshold": {
+            ">probability": 0.80,
+        # Distinguish against hiss
+            "<f2": 4000,
+        },
         "throttle": {s: 0.1 for s, _ in parrot_patterns.items()},
 }
