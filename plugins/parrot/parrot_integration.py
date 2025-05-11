@@ -4,15 +4,18 @@ from typing import Callable, Optional, Sequence
 import json
 import logging
 import time
+import importlib
 
 from talon import Module, resource, events
 from talon.debug import log_exception
 from talon.experimental.parrot import ParrotSystem, ParrotDelegate, ParrotFrame
 from talon_init import TALON_HOME
+from . import patterns
 
 PARROT_HOME = TALON_HOME / "user" / "bluedrink9-talon" / "plugins" / 'parrot'
-pattern_path = str(PARROT_HOME / 'patterns.json')
+pattern_path = str(PARROT_HOME / 'patterns.py')
 model_path = str(sorted(PARROT_HOME.glob("*.pkl"))[0])
+debug = True
 
 ## START PARROT CLASSES ##
 class PatternMatcher:
@@ -299,12 +302,13 @@ class Delegate(ParrotDelegate):
 
         return active
 
-parrot_delegate = Delegate(debug=False)
+parrot_delegate = Delegate(debug=debug)
 system = ParrotSystem(model_path, parrot_delegate)
 
 @resource.watch(pattern_path)
 def on_pattern(f):
     try:
-        parrot_delegate.set_patterns(json.load(f))
+        importlib.reload(patterns)
+        parrot_delegate.set_patterns(patterns.parrot_patterns)
     except Exception:
         log_exception(f"[parrot] invalid pattern file: {pattern_path}")
