@@ -1,5 +1,7 @@
 from talon import settings
 
+sustained_detect_after = 0.2
+
 parrot_patterns = {
     "alveolar_click": {
         "sounds": ["alveolar_click"],
@@ -22,7 +24,7 @@ parrot_patterns = {
         "threshold": {">probability": 0.80},
         # "graceperiod": 0.1,
         # "grace_threshold": {">power": 5, ">probability": 0.4},
-        "detect_after": 0.1,
+        "detect_after": sustained_detect_after,
         # "detect_after": settings.get('user.hiss_scroll_debounce_time')/1000,
         # "throttle": {"shush": 0.01},
     },
@@ -31,7 +33,7 @@ parrot_patterns = {
         "sounds": ["hiss"],
         "threshold": {">probability": 0.80},
         # "detect_after": settings.get('user.hiss_scroll_debounce_time')/1000,
-        "detect_after": 0.1,
+        "detect_after": sustained_detect_after,
         # "graceperiod": 0.1,
         # "grace_threshold": {">power": 5, ">probability": 0.6},
     },
@@ -70,6 +72,7 @@ parrot_patterns = {
     "guttural_ach": {
         "sounds": ["voiceless velar fricative"],
         "threshold": {">probability": 0.95},
+        "detect_after": sustained_detect_after,
         "throttle": {
             "cluck": 0.1,
             "voiceless velar fricative": 0.5,
@@ -79,13 +82,13 @@ parrot_patterns = {
     "voiced_th": {
         "sounds": ["voiced dental fricative"],
         "threshold": {">probability": 0.90},
-        "detect_after": 0.1,
+        "detect_after": sustained_detect_after,
     },
 
     "unvoiced_th": {
         "sounds": ["voiceless dental fricative"],
         "threshold": {">probability": 0.90},
-        "detect_after": 0.1,
+        "detect_after": sustained_detect_after,
     },
 
     # "palate_click": {
