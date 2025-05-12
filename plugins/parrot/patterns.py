@@ -47,6 +47,7 @@ parrot_patterns = {
     "kiss": {
         "sounds": ["tenuis labial click"],
         "threshold": {">probability": 0.95},
+        "throttle": {"kiss": 0.01},
     },
 
     "unaspirated_t_stop": {
@@ -72,10 +73,10 @@ parrot_patterns = {
     "guttural_ach": {
         "sounds": ["voiceless velar fricative"],
         "threshold": {">probability": 0.95},
-        "detect_after": sustained_detect_after,
+        "detect_after": 0.05,
         "throttle": {
             "cluck": 0.1,
-            "voiceless velar fricative": 0.5,
+            "guttural_ach": 0.5,
         },
     },
 
