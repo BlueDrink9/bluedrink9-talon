@@ -25,3 +25,16 @@ class Actions:
         """Send a sequence to the vscode terminal, bypassing vscode shortcut handling etc."""
         # Send ctrl f, mapped to fzf command
         actions.user.run_rpc_command("workbench.action.terminal.sendSequence", {"text": sequence})
+
+    def get_repl_runner() -> str:
+        """Get the VSCode command required to run code for the current language"""
+        lang = actions.code.language()
+        try:
+            command = {
+                "r": "r.runSelection",
+                # Could also use jupyter for this I guess
+                "python": "python.execSelectionInTerminal",
+            }[lang]
+            return command
+        except KeyError:
+            actions.app.notify(f"Language '{lang}' does not have a defined run command yet in vscode_mine.py")
