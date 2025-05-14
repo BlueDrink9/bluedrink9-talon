@@ -6,7 +6,8 @@ parrot_patterns = {
     "alveolar_click": {
         "sounds": ["alveolar_click"],
         "threshold": {
-            ">power": 1,
+            # Ensure mouse sounds don't trigger it.
+            ">power": 3,
             ">probability": 0.95,
             # Distinguish against hiss
             "<f2": 4000,
@@ -25,17 +26,25 @@ parrot_patterns = {
         # "graceperiod": 0.1,
         # "grace_threshold": {">power": 5, ">probability": 0.4},
         "detect_after": sustained_detect_after,
-        # "detect_after": settings.get('user.hiss_scroll_debounce_time')/1000,
         # "throttle": {"shush": 0.01},
     },
 
     "hiss": {
         "sounds": ["hiss"],
         "threshold": {">probability": 0.80},
-        # "detect_after": settings.get('user.hiss_scroll_debounce_time')/1000,
         "detect_after": sustained_detect_after,
-        # "graceperiod": 0.1,
-        # "grace_threshold": {">power": 5, ">probability": 0.6},
+        "graceperiod": 0.5,
+        "grace_threshold": {
+            # ">power": 5,
+            ">probability": 0.6
+        },
+        "throttle": {
+            "speech": 0.5,
+            "unaspirated_t_stop": 0.5,
+            "aspirated_t_stop": 0.5,
+            "silence": 0.5,
+            "treadmill": 0.5,
+        },
     },
 
     # like a k sound in the bottom and back of throat

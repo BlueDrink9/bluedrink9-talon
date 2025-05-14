@@ -5,15 +5,19 @@ parrot(alveolar_click):
 	print("alveolar_click")
     core.repeat_command(1)
 
-parrot(cluck):
-	print("cluck")
+parrot(kiss):
+	print("kiss")
     key("enter")
 
-parrot(throat_kh):
-	print("throat_kh")
-    edit.undo()
+# parrot(cluck):
+# 	print("cluck")
+#     key("enter")
 
-parrot(gutteral_ach):
+# parrot(throat_kh):
+# 	print("throat_kh")
+#     edit.undo()
+
+parrot(guttural_ach):
 	print("gutteral_ach")
     edit.undo()
 
