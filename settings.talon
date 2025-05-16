@@ -15,6 +15,7 @@ settings():
     user.mouse_enable_hiss_scroll = false
     # user.mouse_continuous_scroll_amount = 6
     user.hiss_scroll_debounce_time = 400
+    user.snippets_dir = "bluedrink9-talon/snippets"
     # Reduce flakiness when multiple keys being pressed.
     insert_wait = 40
     # Default 300
