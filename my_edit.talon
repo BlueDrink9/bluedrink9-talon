@@ -6,11 +6,9 @@ remove: user.clear_last_phrase()
 nope: user.clear_last_phrase()
 scratcher: user.clear_last_phrase()
 
-big junk: edit.delete_word()
-bonk: edit.delete_word()
-swallow:
-    edit.extend_word_right()
-    edit.delete()
+big junk: user.edit_command("delete", "wordLeft")
+bonk: user.edit_command("delete", "wordLeft")
+swallow: user.edit_command("delete", "wordRight")
 
 billy: edit.word_left()
 willie: edit.word_right()
