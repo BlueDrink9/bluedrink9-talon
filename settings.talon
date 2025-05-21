@@ -17,6 +17,7 @@ settings():
     user.hiss_scroll_debounce_time = 400
     user.snippets_dir = "bluedrink9-talon/snippets"
     # Reduce flakiness when multiple keys being pressed.
-    insert_wait = 40
+    insert_wait = 10
+    key_wait = 10
     # Default 300
     speech.timeout = 0.700

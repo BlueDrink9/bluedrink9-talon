@@ -16,3 +16,9 @@ run last:
     edit.save()
     # Up + enter
     user.terminal_send("\u001b[A\u000d")
+
+settings():
+    # Reduce flakiness when multiple keys being pressed.
+    insert_wait = 20
+    hotkey_wait = 10
+    key_wait = 20
