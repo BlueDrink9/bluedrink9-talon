@@ -11,7 +11,6 @@ tag(): user.readline_vi
 
 terminate: key(ctrl-c)
 clear word left: key(ctrl-w)
-clear line: key(ctrl-u)
 complete: key(ctrl-e)
 cancel [that]: key(ctrl-c)
 # Clear line, exit scrollbacks etc, before running last
