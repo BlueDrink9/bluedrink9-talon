@@ -25,9 +25,9 @@ parrot(shush:repeat):
 	print("shush {power}")
     user.scroll("up", power)
 
-parrot(hiss:repeat):
-	print("hiss {power}")
-    user.scroll("down", power)
+# parrot(hiss:repeat):
+# 	print("hiss {power}")
+#     user.scroll("down", power)
 
 parrot(voiced_th:repeat):
 	print("voiced_th {power}")
@@ -40,8 +40,8 @@ parrot(unvoiced_th:repeat):
 parrot(shush:stop):
     user.scroll_stop_soft()
 
-parrot(hiss:stop):
-    user.scroll_stop_soft()
+# parrot(hiss:stop):
+#     user.scroll_stop_soft()
 
 parrot(voiced_th:stop):
     user.scroll_stop_soft()
