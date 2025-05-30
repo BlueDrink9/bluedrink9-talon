@@ -14,6 +14,7 @@ tut: ""
 choose yes: key(alt-y)
 choose no: key(alt-n)
 choose okay: key(alt-o)
+choose cancel: key(alt-c)
 big clap: key(ctrl-enter)
 clapper: key(ctrl-enter)
 pinger: key(ctrl-enter)

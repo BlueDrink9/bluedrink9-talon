@@ -38,3 +38,15 @@ class Actions:
             return command
         except KeyError:
             actions.app.notify(f"Language '{lang}' does not have a defined run command yet in vscode_mine.py")
+
+    def dialogue_search_or_enter(
+        rpc_command: str, text: str = None, skip_first_if_empty: bool = False
+    ):
+        """Open the quick open dialog in VSCode, optionally inserting text"""
+        actions.user.run_rpc_command(rpc_command)
+        if text:
+            actions.sleep("50ms")
+            actions.insert(text)
+        elif skip_first_if_empty:
+            # Down to first file that isn't the current one
+            actions.key("down")

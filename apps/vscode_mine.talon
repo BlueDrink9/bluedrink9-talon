@@ -23,19 +23,15 @@ run last:
 
 # Find session
 scout (sesh | recent) [<user.prose>]$:
-    user.vscode_find_recent(prose or "")
-pop sesh {user.vscode_sessions}$:
-    user.vscode_find_recent(vscode_sessions)
-    sleep(150ms)
-    key(enter)
+    user.dialogue_search_or_enter("workbench.action.openRecent", prose or "")
 pop sesh [<user.prose>]$:
-    user.vscode_find_recent(prose or "")
+    user.dialogue_search_or_enter("workbench.action.openRecent", prose or "")
     sleep(150ms)
     key(enter)
 
-pop (file | files | filed) <user.filename>$:
-    user.find_file(filename)
-    sleep(300ms)
+pop (file | files | filed) [<user.filename>]$:
+    user.dialogue_search_or_enter("workbench.action.quickOpen", filename or "", true)
+    sleep(150ms)
     key(enter)
 
 # Find a symbol
@@ -43,6 +39,11 @@ scout symbol [<user.prose>]$:
     user.run_rpc_command("workbench.action.showAllSymbols")
     sleep(50ms)
     user.insert_formatted(prose or "", "CAMEL_CASE")
+
+pop sibling:
+    user.find_sibling_file()
+    sleep(200ms)
+    key(enter)
 
 window reload: user.run_rpc_command("workbench.action.reloadWindow")
 scout again: user.run_rpc_command("rerunSearchEditorSearch")
@@ -52,11 +53,6 @@ go line <number>: edit.jump_line(number - 1)
 pop back: user.run_rpc_command("workbench.action.openPreviousRecentlyUsedEditor")
 pop forward: user.run_rpc_command("workbench.action.openNextRecentlyUsedEditor")
 focus editor: user.run_rpc_command("workbench.action.focusActiveEditorGroup")
-
-pop sibling:
-    user.find_sibling_file()
-    sleep(200ms)
-    key(enter)
 
 # swap to other split
 cross: user.run_rpc_command("workbench.action.focusNextGroup")
