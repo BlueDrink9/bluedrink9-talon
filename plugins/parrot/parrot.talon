@@ -9,9 +9,9 @@ parrot(kiss):
 	print("kiss")
     key("enter")
 
-# parrot(cluck):
-# 	print("cluck")
-#     key("enter")
+parrot(cluck):
+	print("cluck")
+    edit.undo()
 
 # parrot(throat_kh):
 # 	print("throat_kh")
@@ -23,31 +23,39 @@ parrot(guttural_ach):
 
 parrot(shush:repeat):
 	print("shush {power}")
+    tracking.zoom_cancel()
     user.scroll("up", power)
 
-# parrot(hiss:repeat):
-# 	print("hiss {power}")
-#     user.scroll("down", power)
+parrot(shush:stop):
+    user.scroll_stop_soft()
+
+parrot(hiss:repeat):
+	print("hiss {power}")
+    tracking.zoom_cancel()
+    user.scroll("down", power)
+
+parrot(hiss:stop):
+    user.scroll_stop_soft()
 
 parrot(voiced_th:repeat):
 	print("voiced_th {power}")
     user.scroll("right", power)
 
+parrot(voiced_th:stop):
+    user.scroll_stop_soft()
+
 parrot(unvoiced_th:repeat):
 	print("unvoiced_th {power}")
     user.scroll("left", power)
 
-parrot(shush:stop):
-    user.scroll_stop_soft()
-
-# parrot(hiss:stop):
-#     user.scroll_stop_soft()
-
-parrot(voiced_th:stop):
-    user.scroll_stop_soft()
-
 parrot(unvoiced_th:stop):
     user.scroll_stop_soft()
+
+parrot(lip_buzz):
+	print("buzz")
+
+parrot(falsetto_squeak):
+	print("falsetto_squeak")
 
 # parrot(hiss:stop):
 #     user.mouse_scroll_stop()
@@ -66,5 +74,3 @@ parrot(unvoiced_th:stop):
 
 # parrot(whistle):
 # 	print("whistle")
-# parrot(buzz):
-# 	print("buzz")

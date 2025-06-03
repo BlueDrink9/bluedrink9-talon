@@ -47,11 +47,11 @@ parrot_patterns = {
         },
     },
 
-    # like a k sound in the bottom and back of throat
-    "throat_kh": {
-        "sounds": ["unvoiced unaspirated dorsal velar stop"],
-        "threshold": {">power": 5, ">probability": 0.95},
-    },
+    # # like a k sound in the bottom and back of throat
+    # "throat_kh": {
+    #     "sounds": ["unvoiced unaspirated dorsal velar stop"],
+    #     "threshold": {">power": 5, ">probability": 0.95},
+    # },
 
     "kiss": {
         "sounds": ["tenuis labial click"],
@@ -80,7 +80,7 @@ parrot_patterns = {
     },
 
     "guttural_ach": {
-        "sounds": ["voiceless velar fricative"],
+        "sounds": ["voiceless alveolar fricative"],
         "threshold": {">probability": 0.95},
         "detect_after": 0.05,
         "throttle": {
@@ -99,6 +99,18 @@ parrot_patterns = {
         "sounds": ["voiceless dental fricative"],
         "threshold": {">probability": 0.90},
         "detect_after": sustained_detect_after,
+    },
+
+    "lip_buzz": {
+        "sounds": ["voiceless labial fricative"],
+        "threshold": {">probability": 0.90},
+        "detect_after": sustained_detect_after,
+    },
+
+    "falsetto_squeak": {
+        "sounds": ["falsetto eh squeak"],
+        "threshold": {">probability": 0.95},
+       "throttle": {"falsetto_squeak": 0.05},
     },
 
     # "palate_click": {
