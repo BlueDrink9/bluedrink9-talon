@@ -1,6 +1,6 @@
 from talon import settings
 
-sustained_detect_after = 0.2
+sustained_detect_after = 0.15
 
 parrot_patterns = {
     "alveolar_click": {
@@ -23,20 +23,32 @@ parrot_patterns = {
     "shush": {
         "sounds": ["shh"],
         "threshold": {">probability": 0.80},
-        # "graceperiod": 0.1,
-        # "grace_threshold": {">power": 5, ">probability": 0.4},
+        "graceperiod": 0.1,
         "detect_after": sustained_detect_after,
-        # "throttle": {"shush": 0.01},
-    },
-
-    "hiss": {
-        "sounds": ["hiss"],
-        "threshold": {">probability": 0.80},
-        "detect_after": sustained_detect_after,
-        "graceperiod": 0.5,
         "grace_threshold": {
             # ">power": 5,
             ">probability": 0.6
+        },
+        "throttle": {
+            "speech": 0.5,
+            "unaspirated_t_stop": 0.5,
+            "aspirated_t_stop": 0.5,
+            "silence": 0.5,
+            "treadmill": 0.5,
+        },
+    },
+
+    "hiss": {
+        "sounds": ["hiss", "silence"],
+        "threshold": {
+            ">ratio": 2,
+            ">probability": 0.90,
+        },
+        # "detect_after": sustained_detect_after,
+        "graceperiod": sustained_detect_after,
+        "grace_threshold": {
+            # ">power": 5,
+            ">probability": 0.
         },
         "throttle": {
             "speech": 0.5,
@@ -157,12 +169,12 @@ parrot_patterns = {
 
 }
 
-parrot_patterns["speech"] = {
-        "sounds": ["speech"],
-        "threshold": {
-            ">probability": 0.80,
-        # Distinguish against hiss
-            "<f2": 4000,
-        },
-        "throttle": {s: 0.1 for s, _ in parrot_patterns.items()},
-}
+# parrot_patterns["speech"] = {
+#         "sounds": ["speech"],
+#         "threshold": {
+#             ">probability": 0.80,
+#         # Distinguish against hiss
+#             "<f2": 4000,
+#         },
+#         "throttle": {s: 0.1 for s, _ in parrot_patterns.items()},
+# }
