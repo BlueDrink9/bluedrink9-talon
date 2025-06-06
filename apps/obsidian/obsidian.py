@@ -3,7 +3,7 @@ from urllib.parse import quote
 from webbrowser import open as open_uri
 
 
-ADVANCED_URI_ENABLED = True
+ADVANCED_URI_ENABLED = False
 
 ctx = Context()
 ctx.matches = r"""

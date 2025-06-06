@@ -16,7 +16,13 @@ parrot_patterns = {
     },
     "cluck": {
         "sounds": ["cluck"],
-        "threshold": {">power": 3, ">probability": 0.90},
+        "threshold": {
+            ">power": 3,
+            ">probability": 0.98,
+            "<f2": 2500,
+            "<f1": 900,
+            ">f1": 700,
+        },
         "throttle": {"cluck": 0.1},
     },
 
@@ -67,7 +73,10 @@ parrot_patterns = {
 
     "kiss": {
         "sounds": ["tenuis labial click"],
-        "threshold": {">probability": 0.95},
+        "threshold": {
+            ">probability": 0.97,
+            ">f0": 3000,
+        },
         "throttle": {"kiss": 0.01},
     },
 
@@ -169,12 +178,12 @@ parrot_patterns = {
 
 }
 
-# parrot_patterns["speech"] = {
-#         "sounds": ["speech"],
-#         "threshold": {
-#             ">probability": 0.80,
-#         # Distinguish against hiss
-#             "<f2": 4000,
-#         },
-#         "throttle": {s: 0.1 for s, _ in parrot_patterns.items()},
-# }
+parrot_patterns["speech"] = {
+        "sounds": ["speech"],
+        "threshold": {
+            ">probability": 0.80,
+        # Distinguish against hiss
+            "<f2": 4000,
+        },
+        "throttle": {s: 0.1 for s, _ in parrot_patterns.items()},
+}
