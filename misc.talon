@@ -28,3 +28,8 @@ kitty: user.switcher_focus("kitty")
 
 brightness max: user.system_command("ddcutil setvcp 10 100")
 brightness set <number>: user.system_command("ddcutil setvcp 10 {number}")
+
+mouse nudge right [<number>]: mouse_nudge(number or 10, 0)
+mouse nudge left [<number>]: mouse_nudge(-(number or 10), 0)
+mouse nudge up [<number>]: mouse_nudge(0, -(number or 10))
+mouse nudge down [<number>]: mouse_nudge(0, number or 10)
