@@ -17,7 +17,8 @@ cancel [that]: key(ctrl-c)
 rerun last:
     key(ctrl-c:2 up enter)
 code: "code "
-editor | edd: "e "
+editor | edit | edd: "e "
+are script: "Rscript "
 
 dvc: "dvc "
 dvc status: "dvc status\n"
