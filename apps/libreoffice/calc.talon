@@ -64,7 +64,7 @@ freeze first column: key(alt-v c f)
 select visible columns: key(alt-e e o)
 select visible rows: key(alt-e e v)
 sort ascending: key(alt-d a)
-sort descending: key(alt-d i)
+sort descending: key(alt-d n)
 
 edit: key(f2)
 

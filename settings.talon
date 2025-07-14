@@ -32,4 +32,4 @@ settings():
     # tracking.zoom_height = 300
     tracking.zoom_scale = 3.5
 
-    user.tmux_prefix_key = "ctrl-s"
+    user.tmux_prefix_key = "ctrl-q"

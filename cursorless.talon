@@ -24,6 +24,10 @@ break point <user.cursorless_target>:
 bug run <user.cursorless_target>:
     user.cursorless_ide_command("editor.debug.action.selectionToRepl", cursorless_target)
 
+# Evaluate in debug console
+buggy <user.cursorless_target>:
+    user.cursorless_ide_command("editor.debug.action.selectionToRepl", cursorless_target)
+
 # Evaluate in terminal
 code run <user.cursorless_target>:
     command = user.get_repl_runner()

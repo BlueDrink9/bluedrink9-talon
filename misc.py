@@ -3,7 +3,8 @@ import subprocess
 from pathlib import Path
 
 mod = Module()
-mod.tag("send", desc="Tag for apps that use vim motions to send lines to repl")
+
+# mod.tag("send", desc="Tag for apps that use vim motions to send lines to repl")
 
 
 ctx_fm = Context()
