@@ -1,0 +1,34 @@
+list: user.linux_dir
+-
+etcetera: /etc
+root: /
+home: ~
+user root: ~
+dot config: .config
+home dot config: ~/.config
+dot talon: ~/.talon
+talon user: ~/.talon/user
+dot ssh: .ssh
+home dot ssh: ~/.ssh
+bin: /bin
+home bin: ~/bin
+home local: ~/.local
+local bin: /usr/local/bin
+opt: /opt
+var: /var
+temp: /tmp
+proc: /proc
+sys: /sys
+dev: /dev
+slash user: /usr
+user: /usr
+usr bin: /usr/bin
+usr local: /usr/local
+downloads: ~/Downloads
+documents: ~/Documents
+desktop: ~/Desktop
+pictures: ~/Pictures
+music: ~/Music
+videos: ~/Videos
+dot local: .local
+home dot local: ~/.local
