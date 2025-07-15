@@ -10,6 +10,7 @@ send selection: insert(" s")
 beat: sleep(1)
 
 tut: ""
+tuss: ""
 
 choose yes: key(alt-y)
 choose no: key(alt-n)

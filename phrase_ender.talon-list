@@ -4,6 +4,7 @@ language: en
 
 # Prefer a made up word to "over" because otherwise you can't say "over" during a sentence
 tut: ""
+tuss: ""
 spacer: " "
 comma: ", "
 dotter: ". "
