@@ -21,6 +21,10 @@ class UserActions:
         map utterances to open some of the commonly accessed files for that
         particular top level folder. """
 
+    def negate(number: int):
+        """Return the negative of a number."""
+        return -number
+
 
 @ctx_fm.action_class("user")
 class UserActions:
