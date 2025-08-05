@@ -23,7 +23,7 @@ parrot_patterns = {
             "<f1": 900,
             ">f1": 700,
         },
-        "throttle": {"cluck": 0.1},
+        "throttle": {"cluck": 0.2, "pop": 0.2},
     },
 
     "shush": {
@@ -77,7 +77,7 @@ parrot_patterns = {
             ">probability": 0.97,
             ">f0": 3000,
         },
-        "throttle": {"kiss": 0.01},
+        "throttle": {"kiss": 0.3},
     },
 
     "unaspirated_t_stop": {
