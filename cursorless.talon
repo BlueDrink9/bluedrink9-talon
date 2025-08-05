@@ -1,4 +1,3 @@
-
 mode: command
 mode: user.cursorless_spoken_form_test
 tag: user.cursorless
@@ -19,7 +18,7 @@ pour <user.cursorless_target>:
     user.cursorless_insert(cursorless_destination, keys)
 
 # Allow formatting targets
-<user.formatters> <user.cursorless_target>:
+format <user.formatters> <user.cursorless_target>:
     user.cursorless_reformat(cursorless_target, formatters)
 
 # Set a breakpoint at this target

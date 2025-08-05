@@ -7,9 +7,11 @@ app: codium
 
 settings():
     # Reduce flakiness when multiple keys being pressed.
-    insert_wait = 20
-    hotkey_wait = 10
-    key_wait = 20
+    # insert_wait = 10
+    # hotkey_wait = 10
+    # key_wait = 10
+    user.insert_between_wait = 100
+
 
 bar variables:
     user.run_rpc_command("workbench.debug.action.focusVariablesView")

@@ -13,9 +13,9 @@ clap: enter
 ping: enter
 lap: enter
 page down: pagedown
-dunk: pagedown
+# dunk: pagedown
 page up: pageup
-peck: pageup
+# peck: pageup
 # Pair with hiss to go down
 page: pageup
 escape: escape
