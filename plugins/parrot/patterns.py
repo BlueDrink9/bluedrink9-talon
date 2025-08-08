@@ -54,7 +54,7 @@ parrot_patterns = {
         "graceperiod": sustained_detect_after,
         "grace_threshold": {
             # ">power": 5,
-            ">probability": 0.
+            ">probability": 0.7,
         },
         "throttle": {
             "speech": 0.5,
@@ -185,5 +185,5 @@ parrot_patterns["speech"] = {
         # Distinguish against hiss
             "<f2": 4000,
         },
-        "throttle": {s: 0.1 for s, _ in parrot_patterns.items()},
+        "throttle": {s: 0.2 for s, _ in parrot_patterns.items()},
 }

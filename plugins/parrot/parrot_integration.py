@@ -159,8 +159,9 @@ class PatternBuilder:
 
         throttles = {}
         if 'throttle' in pattern:
-            if name not in pattern['throttle']:
-                pattern['throttle'][name] = 0
+            # Disabled to fix graceperiod issues
+            # if name not in pattern['throttle']:
+                # pattern['throttle'][name] = 0
             throttles = pattern['throttle']
 
         return NoisePattern(name, pattern['sounds'], match_pattern, lowest_power_thresholds, throttles, detection_after, grace_period)
