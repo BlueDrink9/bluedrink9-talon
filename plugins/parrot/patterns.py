@@ -12,7 +12,7 @@ parrot_patterns = {
             # Distinguish against hiss
             "<f2": 4000,
         },
-        # "throttle": {"alveolar_click": 0.12, "pop": 0.2},
+        "throttle": {"alveolar_click": 0.3, "pop": 0.2},
     },
     "cluck": {
         "sounds": ["cluck"],
@@ -50,7 +50,7 @@ parrot_patterns = {
             ">ratio": 2,
             ">probability": 0.90,
         },
-        # "detect_after": sustained_detect_after,
+        "detect_after": sustained_detect_after,
         "graceperiod": sustained_detect_after,
         "grace_threshold": {
             # ">power": 5,
