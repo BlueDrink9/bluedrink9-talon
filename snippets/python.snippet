@@ -1,0 +1,37 @@
+language: python
+---
+
+name: log_debug
+phrase: log debug
+insertionScope: statement
+-
+logger.debug("$0")
+---
+
+name: log_info
+phrase: log info
+insertionScope: statement
+-
+logger.info("$0")
+---
+
+name: log_warning
+phrase: log warning
+insertionScope: statement
+-
+logger.warning("$0")
+---
+
+name: log_error
+phrase: log error
+insertionScope: statement
+-
+logger.error("$0")
+---
+
+name: log_critical
+phrase: log critical
+insertionScope: statement
+-
+logger.critical("$0")
+---

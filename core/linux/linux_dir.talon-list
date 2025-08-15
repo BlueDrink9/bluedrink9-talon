@@ -4,6 +4,7 @@ etcetera: /etc
 root: /
 home: ~
 user root: ~
+up: ..
 dot config: .config
 home dot config: ~/.config
 dot talon: ~/.talon
