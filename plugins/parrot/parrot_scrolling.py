@@ -25,8 +25,8 @@ class Scrolling:
         self.scroll_job = None
         self.scroll_dir = 1
         self.noise_power = 1
-        self.scroll_start_ts = None
-        self.scroll_stop_soft_ts = None
+        self.scroll_start_ts: float = 0.0
+        self.scroll_stop_soft_ts: float = 0.0
         self.last_tick_ts = -math.inf
         # scroll only every n seconds
         self.min_tick_interval = 0.1
@@ -38,7 +38,7 @@ class Scrolling:
     def scroll_start(self, direction: str, power: float = 1):
         """Start scrolling until stop is called"""
         new_scroll_dir = -1 if direction == "up" else 1
-        self.scroll_stop_soft_ts = None
+        self.scroll_stop_soft_ts = 0.0
 
         self.noise_power = power
         if self.scroll_job:
@@ -91,8 +91,8 @@ class Scrolling:
     def scroll_stop_hard(self):
         if self.scroll_job:
             cron.cancel(self.scroll_job)
-            self.scroll_start_ts = None
-            self.scroll_stop_soft_ts = None
+            self.scroll_start_ts = 0.0
+            self.scroll_stop_soft_ts = 0.0
             self.scroll_job = None
 
     def is_scrolling(self):
