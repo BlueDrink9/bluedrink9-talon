@@ -14,6 +14,7 @@ parrot_patterns = {
         },
         "throttle": {"alveolar_click": 0.3, "pop": 0.2},
     },
+
     "cluck": {
         "sounds": ["cluck"],
         "threshold": {
@@ -131,7 +132,7 @@ parrot_patterns = {
     "falsetto_squeak": {
         "sounds": ["falsetto eh squeak"],
         "threshold": {">probability": 0.95},
-       "throttle": {"falsetto_squeak": 0.05},
+       "throttle": {"falsetto_squeak": 0.3},
     },
 
     # "palate_click": {
