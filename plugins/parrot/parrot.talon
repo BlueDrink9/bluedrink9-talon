@@ -39,6 +39,7 @@ parrot(hiss:stop):
 
 parrot(voiced_th:repeat):
 	print("voiced_th {power}")
+    tracking.zoom_cancel()
     user.scroll("right", power)
 
 parrot(voiced_th:stop):
@@ -46,6 +47,7 @@ parrot(voiced_th:stop):
 
 parrot(unvoiced_th:repeat):
 	print("unvoiced_th {power}")
+    tracking.zoom_cancel()
     user.scroll("left", power)
 
 parrot(unvoiced_th:stop):
