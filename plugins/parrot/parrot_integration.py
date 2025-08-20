@@ -237,6 +237,13 @@ class Delegate(ParrotDelegate):
         if invalid_patterns:
             class_names = ', '.join(classes)
             logging.warning(f"[parrot] use one of the following labels: {class_names}")
+        invalid_patterns: set[str] = set()
+        for pattern in patterns_to_validate:
+            for throttle_name in pattern.throttles.keys():
+                if throttle_name not in patterns:
+                    invalid_patterns.add(throttle_name)
+        for name in invalid_patterns:
+            logging.warning(f"[parrot] throttle pattern {repr(name)} contains invalid labels and will not be used.")
 
     def set_class_names(self, classes: set[str]) -> None:
         self.classes = classes
