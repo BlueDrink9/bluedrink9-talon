@@ -23,6 +23,10 @@ run last:
     # Up + enter
     user.terminal_send("\u001b[A\u000d")
 
+complete: key(ctrl-e)
+completion <user.number_key>:
+    key("tab:{number_key}")
+    key(ctrl-e)
 # Find session
 scout (sesh | recent) [<user.prose>]$:
     user.dialogue_search_or_enter("workbench.action.openRecent", prose or "")
