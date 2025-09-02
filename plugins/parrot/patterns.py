@@ -27,6 +27,18 @@ parrot_patterns = {
         "throttle": {"cluck": 0.2, "pop": 0.2},
     },
 
+    "pop": {
+        "sounds": ["pop"],
+        "threshold": {
+            # ">power": 3,
+            ">probability": 0.98,
+            # "<f2": 2500,
+            # "<f1": 900,
+            # ">f1": 700,
+        },
+        "throttle": {"cluck": 0.2, "pop": 0.2},
+    },
+
     "shush": {
         "sounds": ["shh"],
         "threshold": {">probability": 0.80},
@@ -38,10 +50,9 @@ parrot_patterns = {
         },
         "throttle": {
             "speech": 0.5,
-            "unaspirated_t_stop": 0.5,
-            "aspirated_t_stop": 0.5,
-            "silence": 0.5,
-            "treadmill": 0.5,
+            # "unaspirated_t_stop": 0.5,
+            # "aspirated_t_stop": 0.5,
+            # "silence": 0.5,
         },
     },
 
@@ -59,10 +70,10 @@ parrot_patterns = {
         },
         "throttle": {
             "speech": 0.5,
-            "unaspirated_t_stop": 0.5,
-            "aspirated_t_stop": 0.5,
-            "silence": 0.5,
-            "treadmill": 0.5,
+            # "unaspirated_t_stop": 0.5,
+            # "aspirated_t_stop": 0.5,
+            # "silence": 0.5,
+            # "treadmill": 0.5,
         },
     },
 
@@ -81,35 +92,35 @@ parrot_patterns = {
         "throttle": {"kiss": 0.3},
     },
 
-    "unaspirated_t_stop": {
-        "sounds": ["unaspirated voiceless alveolar stop"],
-        "threshold": {
-            ">probability": 0.95,
-            # Distinguish against hiss
-            "<f2": 4000,
-            "<f0": 500,
-        },
-    },
+    # "unaspirated_t_stop": {
+    #     "sounds": ["unaspirated voiceless alveolar stop"],
+    #     "threshold": {
+    #         ">probability": 0.95,
+    #         # Distinguish against hiss
+    #         "<f2": 4000,
+    #         "<f0": 500,
+    #     },
+    # },
 
-    "aspirated_t": {
-        "sounds": ["aspirated voiceless alveolar stop"],
-        "threshold": {
-            ">probability": 0.95,
-            # Distinguish against hiss
-            "<f2": 4000,
-            "<f0": 500,
-        },
-    },
+    # "aspirated_t": {
+    #     "sounds": ["aspirated voiceless alveolar stop"],
+    #     "threshold": {
+    #         ">probability": 0.95,
+    #         # Distinguish against hiss
+    #         "<f2": 4000,
+    #         "<f0": 500,
+    #     },
+    # },
 
-    "guttural_ach": {
-        "sounds": ["voiceless alveolar fricative"],
-        "threshold": {">probability": 0.95},
-        "detect_after": 0.05,
-        "throttle": {
-            "cluck": 0.1,
-            "guttural_ach": 0.5,
-        },
-    },
+    # "guttural_ach": {
+    #     "sounds": ["voiceless alveolar fricative"],
+    #     "threshold": {">probability": 0.95},
+    #     "detect_after": 0.05,
+    #     "throttle": {
+    #         "cluck": 0.1,
+    #         "guttural_ach": 0.5,
+    #     },
+    # },
 
     "voiced_th": {
         "sounds": ["voiced dental fricative"],
