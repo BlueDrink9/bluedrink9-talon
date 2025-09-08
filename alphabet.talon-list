@@ -33,6 +33,7 @@ language: en
 
 # air: a
 elf: a
+aim: a
 alph: a
 # arch: a
 # batch: b
@@ -70,8 +71,10 @@ odd: o
 ox: o
 # pink: p
 pete: p
+pine: p
 # pet: p
 quench: q
+quest: q
 # red: r
 ray: r
 sun: s
