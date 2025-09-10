@@ -1,6 +1,10 @@
 app: libre_office
 -
 
+please [<user.text>]:
+    key(shift-escape)
+    insert(text or "")
+
 go <user.letters> <user.number_string>:
     # Open navigator sidebar
     key(alt-4)
@@ -126,10 +130,10 @@ sheet left:
 sheet right:
     key(ctrl-pgdown)
 
-screen left:
+page left:
     key(alt-pgup)
 
-screen right:
+page right:
     key(alt-pgdown)
 
 # taken from excel shortcuts
