@@ -41,7 +41,7 @@ parrot_patterns = {
 
     "shush": {
         "sounds": ["shh"],
-        "threshold": {">probability": 0.80},
+        "threshold": {">probability": 0.85},
         "graceperiod": 0.1,
         "detect_after": sustained_detect_after,
         "grace_threshold": {
@@ -57,19 +57,21 @@ parrot_patterns = {
     },
 
     "hiss": {
-        "sounds": ["hiss", "silence"],
+        "sounds": ["hiss"],
+        # "sounds": ["hiss", "silence"],
         "threshold": {
-            ">ratio": 2,
+            # ">ratio": 2,
             ">probability": 0.90,
         },
         "detect_after": sustained_detect_after,
         "graceperiod": sustained_detect_after,
         "grace_threshold": {
             # ">power": 5,
-            ">probability": 0.7,
+            ">probability": 0.6,
         },
         "throttle": {
             "speech": 0.5,
+            "kiss": 0.5,
             # "unaspirated_t_stop": 0.5,
             # "aspirated_t_stop": 0.5,
             # "silence": 0.5,
@@ -89,7 +91,10 @@ parrot_patterns = {
             ">probability": 0.97,
             ">f0": 3000,
         },
-        "throttle": {"kiss": 0.3},
+        "throttle": {
+            "kiss": 0.3,
+            "alveolar_click": 0.3,
+        },
     },
 
     # "unaspirated_t_stop": {
