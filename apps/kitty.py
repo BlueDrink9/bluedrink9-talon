@@ -46,7 +46,7 @@ class EditActions:
 
 @ctx.action_class("user")
 class UserActions:
-    pattern = re.compile(r'\[([^\[\]]+)\](?=[^\[\]]*$)')
+    # pattern = re.compile(r'\[([^\[\]]+)\](?=[^\[\]]*$)')
     def file_manager_current_path():
         path = ui.active_window().title
 
