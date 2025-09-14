@@ -25,6 +25,9 @@ format <user.formatters> <user.cursorless_target>:
 break point <user.cursorless_target>:
     user.cursorless_ide_command("editor.debug.action.toggleBreakpoint", cursorless_target)
 
+[quick] fix <user.cursorless_target>:
+    user.cursorless_ide_command("editor.action.quickFix", cursorless_target)
+
 # Evaluate in debug console
 bug run <user.cursorless_target> | buggy <user.cursorless_target>:
     user.cursorless_ide_command("editor.debug.action.selectionToRepl", cursorless_target)

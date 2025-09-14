@@ -9,10 +9,11 @@ tag(): user.git
 # tag(): user.kubectl
 tag(): user.readline_vi
 
+renix: "renix "
 terminate: key(ctrl-c)
+cancel [that]: key(ctrl-c)
 clear word left: key(ctrl-w)
 complete: key(ctrl-e)
-cancel [that]: key(ctrl-c)
 # Clear line, exit scrollbacks etc, before running last
 rerun last:
     key(ctrl-c:2 up enter)

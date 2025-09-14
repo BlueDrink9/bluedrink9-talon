@@ -57,6 +57,7 @@ parrot(lip_buzz):
 	print("buzz")
 
 parrot(falsetto_squeak):
+    print("squeak")
     # close zoom if open
     tracking.zoom_cancel()
     mouse_click(1)

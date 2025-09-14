@@ -3,7 +3,6 @@ language: en
 tag(): user.rango_explicit_clicking_forced
 tag(): user.pop_twice_to_repeat
 tag(): user.unprefixed_numbers
-tag(): user.cursorless_use_community_snippets
 settings():
     user.subtitles_show = true
     user.subtitles_size = 70
@@ -20,6 +19,7 @@ settings():
     user.paste_to_insert_threshold = 30
     user.file_manager_auto_show_pickers = true
     user.help_max_command_lines_per_page = 40
+    user.help_max_contexts_per_page = 30
     user.command_history_display = 30
 
     user.cursorless_settings_directory = "bluedrink9-talon/cursorless-settings"

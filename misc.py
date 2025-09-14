@@ -41,6 +41,7 @@ class UserActions:
 
         # Define ownifunction because Define and function becausefile_manager_open_directory does not work with relative directories
         def enter_entry(e):
+            actions.key("f5")  # refresh. todo: convert to action
             actions.insert(e)
             actions.key("enter")
             actions.sleep("100ms")
