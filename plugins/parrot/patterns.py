@@ -141,8 +141,11 @@ parrot_patterns = {
 
     "lip_buzz": {
         "sounds": ["voiceless labial fricative"],
-        "threshold": {">probability": 0.90},
-        "detect_after": sustained_detect_after,
+        "threshold": {
+        ">probability": 0.90
+        },
+        "throttle": {"lip_buzz": 0.3},
+        # "detect_after": sustained_detect_after,
     },
 
     "falsetto_squeak": {
