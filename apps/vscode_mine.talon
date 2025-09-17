@@ -37,7 +37,12 @@ pop sesh [<user.prose>]$:
 
 pop (file | files | filed) [<user.filename>]$:
     user.dialogue_search_or_enter("workbench.action.quickOpen", filename or "", true)
-    sleep(150ms)
+    sleep(400ms)
+    key(enter)
+
+pop symbol [<user.prose>]$:
+    user.dialogue_search_or_enter("workbench.action.gotoSymbol", prose or "", true)
+    sleep(200ms)
     key(enter)
 
 # Find a symbol
