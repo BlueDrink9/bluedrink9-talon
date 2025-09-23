@@ -1,7 +1,7 @@
 language: en
 -
 tag(): user.rango_explicit_clicking_forced
-tag(): user.pop_twice_to_repeat
+# tag(): user.pop_twice_to_repeat
 tag(): user.unprefixed_numbers
 settings():
     user.subtitles_show = true
@@ -9,6 +9,9 @@ settings():
     user.subtitles_y = 0.75
     user.subtitles_screens = "focus"
     user.subtitles_timeout_per_char = 80
+    # (0 = off, 1 = on with eyetracker but not zoom mouse mode, 2 = on but not with zoom mouse mode)
+    # use parrot(pop) instead
+    user.mouse_enable_pop_click = 0
     user.double_pop_speed_maximum = 0.5
     user.grids_put_one_bottom_left = false
     # user.mouse_enable_hiss_scroll = true

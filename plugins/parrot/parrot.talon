@@ -13,6 +13,13 @@ parrot(cluck):
 	print("cluck")
     edit.undo()
 
+parrot(pop):
+	print("pop")
+# if tracking.control_zoom_enabled():
+#             return
+    # tracking.zoom()
+    mouse_click(0)
+
 # parrot(throat_kh):
 # 	print("throat_kh")
 #     edit.undo()

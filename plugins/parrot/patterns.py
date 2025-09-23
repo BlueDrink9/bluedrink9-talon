@@ -36,7 +36,7 @@ parrot_patterns = {
             # "<f1": 900,
             # ">f1": 700,
         },
-        "throttle": {"cluck": 0.2, "pop": 0.2},
+        "throttle": {"cluck": 0.2, "pop": 0.050},
     },
 
     "shush": {
@@ -71,7 +71,7 @@ parrot_patterns = {
         },
         "throttle": {
             "speech": 0.5,
-            "kiss": 0.5,
+            "kiss": 1.0,
             # "unaspirated_t_stop": 0.5,
             # "aspirated_t_stop": 0.5,
             # "silence": 0.5,
