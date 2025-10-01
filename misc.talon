@@ -3,6 +3,10 @@
 #     mode.enable("dictation")
 #     user.parse_phrase(phrase or "")
 
+face on: mode.enable("face")
+face off: mode.disable("face")
+
+
 send (that|it): insert(" ss")
 
 send selection: insert(" s")
