@@ -67,9 +67,17 @@ parrot(falsetto_squeak):
     print("squeak")
     # close zoom if open
     tracking.zoom_cancel()
-    mouse_click(1)
+    user.mouse_drag(0)
     # close the mouse grid if open
     user.grid_close()
+
+# parrot(falsetto_squeak):
+#     print("squeak")
+#     # close zoom if open
+#     tracking.zoom_cancel()
+#     mouse_click(1)
+#     # close the mouse grid if open
+#     user.grid_close()
 
 # parrot(hiss:stop):
 #     user.mouse_scroll_stop()
