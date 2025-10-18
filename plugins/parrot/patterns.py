@@ -154,6 +154,12 @@ parrot_patterns = {
        "throttle": {"falsetto_squeak": 0.3},
     },
 
+    "whistle": {
+        "sounds": ["whistle"],
+        "threshold": {">probability": 0.95},
+       "throttle": {"whistle": 0.3},
+    },
+
     # "palate_click": {
     # 	"sounds": ["click_palatal"],
     # 	"threshold": {

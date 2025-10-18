@@ -62,12 +62,21 @@ parrot(unvoiced_th:stop):
 
 parrot(lip_buzz):
 	print("buzz")
+	tracking.control_toggle()
 
 parrot(falsetto_squeak):
     print("squeak")
     # close zoom if open
     tracking.zoom_cancel()
     user.mouse_drag(0)
+    # close the mouse grid if open
+    user.grid_close()
+
+parrot(whistle):
+    print("whistle")
+    # close zoom if open
+    tracking.zoom_cancel()
+    mouse_click(1)
     # close the mouse grid if open
     user.grid_close()
 
