@@ -34,6 +34,7 @@ class Actions:
                 "r": "r.runSelection",
                 # Could also use jupyter for this I guess
                 "python": "python.execSelectionInTerminal",
+                "sql": "sqlite.runSelectedQuery",
             }[lang]
             return command
         except KeyError:

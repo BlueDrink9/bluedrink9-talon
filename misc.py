@@ -2,15 +2,19 @@ from talon import Module, Context, actions, app
 import subprocess
 from pathlib import Path
 
+
 mod = Module()
 
 # mod.tag("send", desc="Tag for apps that use vim motions to send lines to repl")
 
+# Disable face mode on startup
+app.register("ready", lambda: actions.mode.disable("face"))
 
 ctx_fm = Context()
 ctx_fm.matches = r"""
 tag: user.file_manager
 """
+
 
 @mod.action_class
 class UserActions:
@@ -19,7 +23,7 @@ class UserActions:
         ascend back to the original directory. Useful when you work with multiple
         folders that contain similar structure - always stay in the top level, then
         map utterances to open some of the commonly accessed files for that
-        particular top level folder. """
+        particular top level folder."""
 
     def negate(number: int):
         """Return the negative of a number."""

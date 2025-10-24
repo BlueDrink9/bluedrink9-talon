@@ -22,6 +22,11 @@ run last:
     # Up + enter
     user.terminal_send("\u001b[A\u000d")
 
+command previous:
+    user.run_rpc_command("workbench.action.terminal.scrollToPreviousCommand")
+command next:
+    user.run_rpc_command("workbench.action.terminal.scrollToNextCommand")
+
 complete: key(ctrl-e)
 completion <user.number_key>:
     key("tab:{number_key}")
@@ -54,6 +59,12 @@ scout symbol [<user.prose>]$:
 pop sibling:
     user.find_sibling_file()
     sleep(200ms)
+    key(enter)
+
+debug expand:
+    user.run_rpc_command("workbench.debug.action.toggleRepl")
+    key(shift-tab)
+    key(end)
     key(enter)
 
 window reload: user.run_rpc_command("workbench.action.reloadWindow")
