@@ -5,23 +5,27 @@ sustained_detect_after = 0.15
 parrot_patterns = {
     "alveolar_click": {
         "sounds": ["alveolar_click"],
+        "detect_after": 0.01,
         "threshold": {
             # Ensure mouse sounds don't trigger it.
             ">power": 3,
             ">probability": 0.95,
             # Distinguish against hiss
             "<f2": 4000,
+            # distinguish against kiss
+            "<f0": 5000,
         },
         "throttle": {"alveolar_click": 0.3, "pop": 0.2},
     },
 
     "cluck": {
         "sounds": ["cluck"],
+        "detect_after": 0.005,
         "threshold": {
             ">power": 3,
             ">probability": 0.98,
-            "<f2": 2500,
-            "<f1": 900,
+            # "<f2": 2500,
+            "<f1": 950,
             ">f1": 700,
         },
         "throttle": {"cluck": 0.2, "pop": 0.2},
@@ -71,7 +75,7 @@ parrot_patterns = {
         },
         "throttle": {
             "speech": 0.5,
-            "kiss": 1.0,
+            "kiss": 0.5,
             # "unaspirated_t_stop": 0.5,
             # "aspirated_t_stop": 0.5,
             # "silence": 0.5,
@@ -87,8 +91,9 @@ parrot_patterns = {
 
     "kiss": {
         "sounds": ["tenuis labial click"],
+        "detect_after": 0.01,
         "threshold": {
-            ">probability": 0.97,
+            ">probability": 0.98,
             ">f0": 3000,
         },
         "throttle": {
@@ -142,7 +147,7 @@ parrot_patterns = {
     "lip_buzz": {
         "sounds": ["voiceless labial fricative"],
         "threshold": {
-        ">probability": 0.90
+            ">probability": 0.95,
         },
         "throttle": {"lip_buzz": 0.3},
         # "detect_after": sustained_detect_after,

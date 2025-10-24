@@ -15,9 +15,11 @@ parrot(cluck):
 
 parrot(pop):
 	print("pop")
-# if tracking.control_zoom_enabled():
-#             return
+    # tracking.zoom_cancel()
     # tracking.zoom()
+    # do_click = tracking.control_zoom_enabled()
+    # do_click = do_click == false
+    # if do_click: mouse_click(0)
     mouse_click(0)
 
 # parrot(throat_kh):
