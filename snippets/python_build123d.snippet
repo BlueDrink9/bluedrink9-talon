@@ -1,0 +1,261 @@
+language: python
+---
+
+name: build part
+phrase: build part
+insertionScope: statement
+-
+with BuildPart() as p${1}:
+    ${0}
+
+---
+
+name: build sketch
+phrase: build sketch
+insertionScope: statement
+-
+with BuildSketch(${1}) as s${2}:
+    ${0}
+
+---
+
+name: build sketch and extrude
+phrase: build sketch and extrude
+insertionScope: statement
+-
+with BuildSketch(${1}) as s${2}:
+    ${0}
+extrude(amount=${3})
+
+---
+
+name: build line
+phrase: build line
+insertionScope: statement
+-
+with BuildLine(${1}) as l${2}:
+    ${0}
+
+---
+
+name: build location
+phrase: build location
+insertionScope: statement
+-
+Location((${0}, ${1})):
+---
+
+name: build locations
+phrase: build locations
+insertionScope: statement
+-
+with Locations((${1})):
+    ${0}
+---
+
+name: build polar locations
+phrase: build polar locations
+insertionScope: statement
+-
+with PolarLocations(${1}):
+    ${0}
+
+---
+
+name: build grid locations
+phrase: build grid locations
+insertionScope: statement
+-
+with GridLocations(${1}):
+    ${0}
+
+---
+
+name: build hex locations
+phrase: build hex locations
+insertionScope: statement
+-
+with HexLocations(${1}):
+    ${0}
+
+---
+
+name: build center
+phrase: build center
+insertionScope: statement
+-
+Align.CENTER
+---
+
+name: build min
+phrase: build min
+insertionScope: statement
+-
+Align.MIN
+---
+
+name: build max
+phrase: build max
+insertionScope: statement
+-
+Align.MAX
+---
+
+name: build center center
+phrase: build center center
+insertionScope: statement
+-
+align=(Align.CENTER,Align.CENTER)
+---
+
+name: build center min
+phrase: build center min
+insertionScope: statement
+-
+align=(Align.CENTER,Align.MIN)
+
+---
+
+name: build center max
+phrase: build center max
+insertionScope: statement
+-
+align=(Align.CENTER,Align.MAX)
+
+---
+
+name: build min center
+phrase: build min center
+insertionScope: statement
+-
+align=(Align.MIN,Align.CENTER)
+
+---
+
+name: build min min
+phrase: build min min
+insertionScope: statement
+-
+align=(Align.MIN,Align.MIN)
+
+---
+
+name: build min max
+phrase: build min max
+insertionScope: statement
+-
+align=(Align.MIN,Align.MAX)
+
+---
+
+name: build max center
+phrase: build max center
+insertionScope: statement
+-
+align=(Align.MAX,Align.CENTER)
+
+---
+
+name: build max min
+phrase: build max min
+insertionScope: statement
+-
+align=(Align.MAX,Align.MIN)
+
+---
+
+name: build max max
+phrase: build max max
+insertionScope: statement
+-
+align=(Align.MAX,Align.MAX)
+
+---
+
+name: build extrude
+phrase: build extrude
+insertionScope: statement
+-
+extrude(amount=${0})
+
+---
+
+name: build offset
+phrase: build offset
+insertionScope: statement
+-
+offset(amount=${0})
+
+---
+
+name: build split
+phrase: build split
+insertionScope: statement
+-
+split(bisect_by=Plane.${0})
+
+---
+
+name: build mirror
+phrase: build mirror
+insertionScope: statement
+-
+mirror(about=Plane.${0})
+
+---
+
+name: build plane offset
+phrase: build plane offset
+insertionScope: statement
+-
+Plane.${1|XY,XZ,YZ|}.offset(${0:0})
+
+---
+
+name: build rectangle rounded
+phrase: build rectangle rounded
+insertionScope: statement
+-
+RectangleRounded(${1})${0}
+
+---
+
+name: build mode subtract
+phrase: build mode subtract
+insertionScope: statement
+-
+mode=Mode.SUBTRACT
+
+---
+
+name: build mode private
+phrase: build mode private
+insertionScope: statement
+-
+mode=Mode.PRIVATE
+
+---
+
+name: build mode intersect
+phrase: build mode intersect
+insertionScope: statement
+-
+mode=Mode.INTERSECT
+
+---
+
+name: build mode add
+phrase: build mode add
+insertionScope: statement
+-
+mode=Mode.ADD
+
+---
+
+name: build mode replace
+phrase: build mode replace
+insertionScope: statement
+-
+mode=Mode.REPLACE
+
+---
