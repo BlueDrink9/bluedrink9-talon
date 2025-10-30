@@ -5,17 +5,21 @@ sustained_detect_after = 0.15
 parrot_patterns = {
     "alveolar_click": {
         "sounds": ["alveolar_click"],
-        "detect_after": 0.01,
+        "detect_after": 0.003,
         "threshold": {
             # Ensure mouse sounds don't trigger it.
             ">power": 3,
-            ">probability": 0.95,
+            ">probability": 0.90,
             # Distinguish against hiss
             "<f2": 4000,
             # distinguish against kiss
             "<f0": 5000,
         },
         "throttle": {"alveolar_click": 0.3, "pop": 0.2},
+        "graceperiod": 0.01,
+        "grace_threshold": {
+            ">probability": 0.6
+        },
     },
 
     "cluck": {
@@ -23,10 +27,14 @@ parrot_patterns = {
         "detect_after": 0.005,
         "threshold": {
             ">power": 3,
-            ">probability": 0.98,
+            ">probability": 0.94,
             # "<f2": 2500,
             "<f1": 950,
             ">f1": 700,
+        },
+        "graceperiod": 0.01,
+        "grace_threshold": {
+            ">probability": 0.7
         },
         "throttle": {"cluck": 0.2, "pop": 0.2},
     },
@@ -163,6 +171,7 @@ parrot_patterns = {
         "sounds": ["whistle"],
         "threshold": {">probability": 0.95},
        "throttle": {"whistle": 0.3},
+       "detect_after": 0.1,
     },
 
     # "palate_click": {
