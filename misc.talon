@@ -5,6 +5,7 @@
 
 face on: mode.enable("face")
 face off: mode.disable("face")
+key(super-alt-enter): mode.toggle("face")
 
 
 send (that|it): insert(" ss")
@@ -43,3 +44,6 @@ reset hub: user.system_command("sudo reset-talon-hub")
     number = number or 10
     mouse_nudge(0, -1*number)
 [mouse] nudge down [<number>]: mouse_nudge(0, number or 10)
+
+# deck(pedal_left): key(q)
+# face(smile): key(enter)
