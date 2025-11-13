@@ -8,7 +8,7 @@ mod = Module()
 # mod.tag("send", desc="Tag for apps that use vim motions to send lines to repl")
 
 # Disable face mode on startup
-app.register("ready", lambda: actions.mode.disable("face"))
+app.register("launch", lambda: actions.mode.disable("face"))
 
 ctx_fm = Context()
 ctx_fm.matches = r"""
