@@ -3,9 +3,9 @@
 #     mode.enable("dictation")
 #     user.parse_phrase(phrase or "")
 
-face on: mode.enable("face")
-face off: mode.disable("face")
-key(super-ctrl-enter): mode.toggle("face")
+face on: mode.enable("user.my_face")
+face off: mode.disable("user.my_face")
+key(super-ctrl-enter): mode.toggle("user.my_face")
 key(super-alt-enter):
     tracking.zoom_cancel()
     tracking.control_zoom_toggle(false)
