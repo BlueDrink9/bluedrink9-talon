@@ -32,6 +32,7 @@ class Actions:
         try:
             command = {
                 "r": "r.runSelection",
+                "quarto": "r.runSelection",
                 # Could also use jupyter for this I guess
                 "python": "python.execSelectionInTerminal",
                 "sql": "sqlite.runSelectedQuery",
