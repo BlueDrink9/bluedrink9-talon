@@ -29,6 +29,10 @@ class UserActions:
         """Return the negative of a number."""
         return -number
 
+    def not_(b: bool):
+        """Return the not of a bool."""
+        return not b
+
 
 @ctx_fm.action_class("user")
 class UserActions:
