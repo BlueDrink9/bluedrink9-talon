@@ -17,9 +17,13 @@ pour <user.cursorless_target>:
 (insert <user.cursorless_destination> | <user.cursorless_destination> insert) <user.keys>$:
     user.cursorless_insert(cursorless_destination, keys)
 
-# Allow formatting targets
+# Allow talon formatting targets
 format <user.formatters> <user.cursorless_target>:
     user.cursorless_reformat(cursorless_target, formatters)
+
+# Use VSCode formatter
+code format <user.cursorless_target>:
+    user.cursorless_ide_command("editor.action.formatSelection", cursorless_target)
 
 # Set a breakpoint at this target
 break point <user.cursorless_target>:
@@ -41,4 +45,10 @@ code run <user.cursorless_target> | code it <user.cursorless_target>:
 make comment <user.cursorless_target>:
     user.cursorless_command("editNewLineBefore", cursorless_target)
     user.run_rpc_command("vscode-neovim.lua", "vim.cmd('startinsert')")
+    user.run_rpc_command("editor.action.commentLine")
+
+make comment:
+    user.run_rpc_command("editor.action.insertLineBefore")
+    user.run_rpc_command("vscode-neovim.lua", "vim.cmd('startinsert')")
+    key(up)
     user.run_rpc_command("editor.action.commentLine")
