@@ -1,6 +1,6 @@
 from talon import settings
 
-sustained_detect_after = 0.15
+sustained_detect_after = 0.10
 
 parrot_patterns = {
     "alveolar_click": {

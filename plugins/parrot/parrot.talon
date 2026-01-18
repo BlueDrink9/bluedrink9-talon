@@ -16,11 +16,11 @@ parrot(cluck):
 parrot(pop):
 	print("pop")
     # tracking.zoom_cancel()
-    # tracking.zoom()
-    # do_click = tracking.control_zoom_enabled()
-    # do_click = do_click == false
-    # if do_click: mouse_click(0)
-    mouse_click(0)
+    do_zoom = tracking.control_zoom_enabled()
+    do_click = user.not_(do_zoom)
+    print(do_zoom)
+    if do_click: mouse_click(0)
+    # if do_zoom: tracking.zoom()
 
 # parrot(throat_kh):
 # 	print("throat_kh")
@@ -64,6 +64,7 @@ parrot(unvoiced_th:stop):
 
 parrot(lip_buzz):
 	print("buzz")
+    tracking.zoom_cancel()
 	tracking.control_toggle()
 
 parrot(falsetto_squeak):
