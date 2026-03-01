@@ -5,7 +5,6 @@ sustained_detect_after = 0.10
 parrot_patterns = {
     "alveolar_click": {
         "sounds": ["alveolar_click"],
-        "detect_after": 0.003,
         "threshold": {
             # Ensure mouse sounds don't trigger it.
             ">power": 3,
@@ -24,7 +23,6 @@ parrot_patterns = {
 
     "cluck": {
         "sounds": ["cluck"],
-        "detect_after": 0.005,
         "threshold": {
             ">power": 3,
             ">probability": 0.94,
@@ -99,7 +97,6 @@ parrot_patterns = {
 
     "kiss": {
         "sounds": ["tenuis labial click"],
-        "detect_after": 0.01,
         "threshold": {
             ">probability": 0.98,
             ">f0": 3000,
