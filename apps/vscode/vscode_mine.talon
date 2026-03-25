@@ -61,7 +61,7 @@ pop sibling:
     key(enter)
 
 debug expand:
-    user.run_rpc_command("workbench.debug.action.toggleRepl")
+    user.run_rpc_command("workbench.debug.action.focusRepl")
     key(shift-tab)
     key(end)
     key(enter)
