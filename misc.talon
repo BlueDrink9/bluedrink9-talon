@@ -5,7 +5,11 @@
 
 face on: mode.enable("face")
 face off: mode.disable("face")
-key(super-alt-enter): mode.toggle("face")
+key(super-ctrl-enter): mode.toggle("face")
+key(super-alt-enter):
+	tracking.control_toggle()
+    tracking.zoom_cancel()
+key(super-alt-y): tracking.calibrate()
 
 
 send (that|it): insert(" ss")
@@ -28,6 +32,8 @@ pinger: key(ctrl-enter)
 cody |coda | coder: user.switcher_focus("Codium")
 foxy: user.switcher_focus("firefox")
 kitty: user.switcher_focus("kitty")
+
+talon edit config: user.system_command("codium {path.talon_user()}/bluedrink9-talon/")
 
 # scout [<user.text>]: mimic("find it" + " {text or ''}")
 # (jetpack | hunty | hunter) [<user.text>]: mimic("file hunt " + (text or ""))
