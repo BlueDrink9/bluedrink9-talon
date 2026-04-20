@@ -10,6 +10,7 @@ key(super-alt-enter):
 	tracking.control_toggle()
     tracking.zoom_cancel()
 key(super-alt-y): tracking.calibrate()
+key(super-alt-u): user.system_command("pkill talon-usb")
 
 
 send (that|it): insert(" ss")
@@ -41,6 +42,7 @@ talon edit config: user.system_command("codium {path.talon_user()}/bluedrink9-ta
 brightness max: user.system_command("ddcutil setvcp 10 100")
 brightness set <number>: user.system_command("ddcutil setvcp 10 {number}")
 reset hub: user.system_command("sudo reset-tobii-hub")
+reset toby: user.system_command("pkill talon-usb")
 
 [mouse] nudge right [<number>]: mouse_nudge(number or 10, 0)
 [mouse] nudge left [<number>]:
