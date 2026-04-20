@@ -1,6 +1,7 @@
 from talon import Module, Context, actions, app
 import subprocess
 from pathlib import Path
+import platform
 
 
 mod = Module()
@@ -18,6 +19,21 @@ tag: user.file_manager
 
 @mod.action_class
 class UserActions:
+    def reset_tobii() -> None:
+        """Kill talon-usb process"""
+        system = platform.system().lower()
+
+        if system == "windows":
+            subprocess.run(["taskkill", "/IM", "talon-usb.exe", "/F"])
+        elif system in ("linux", "darwin"):  # Linux or macOS
+            subprocess.run(["pkill", "-f", "talon-usb"])
+
+        if actions.tracking.control_zoom_enabled():
+            actions.tracking.zoom_cancel()
+            actions.sleep("800ms")
+            actions.tracking.control_zoom_toggle(False)
+            actions.tracking.control_zoom_toggle(True)
+
     def peek_file(f: str):
         """Open each folder in the inputted path and then open the final file, then
         ascend back to the original directory. Useful when you work with multiple
@@ -50,7 +66,9 @@ class UserActions:
         # Define ownifunction because Define and function becausefile_manager_open_directory does not work with relative directories
         def enter_entry(e):
             actions.key("f5")  # refresh. todo: convert to action
+            actions.sleep("800ms")
             actions.insert(e)
+            actions.sleep("100ms")
             actions.key("enter")
             actions.sleep("100ms")
 
