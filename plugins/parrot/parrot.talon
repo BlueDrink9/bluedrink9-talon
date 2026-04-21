@@ -11,6 +11,7 @@ parrot(kiss):
 
 parrot(cluck):
 	print("cluck")
+    tracking.zoom_cancel()
     edit.undo()
 
 parrot(pop):
