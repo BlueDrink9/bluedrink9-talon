@@ -40,3 +40,8 @@ settings():
     tracking.zoom_scale = 3.5
 
     user.tmux_prefix_key = "ctrl-q"
+    user.tmux_command_key = ";"
+    user.obsidian_use_cli = true
+
+    user.ocr_behavior_when_no_eye_tracker = "ACTIVE_WINDOW"
+    user.ocr_cursor_behavior_when_no_eye_tracker = "ACTIVE_WINDOW_CENTERe"
