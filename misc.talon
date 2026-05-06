@@ -5,14 +5,6 @@
 
 face on: mode.enable("user.my_face")
 face off: mode.disable("user.my_face")
-key(super-ctrl-enter): mode.toggle("user.my_face")
-key(super-alt-enter):
-    tracking.zoom_cancel()
-    tracking.control_zoom_toggle(false)
-	tracking.control_toggle()
-key(super-alt-y): tracking.calibrate()
-key(super-alt-u): user.reset_tobii()
-
 
 send (that|it): insert(" ss")
 
