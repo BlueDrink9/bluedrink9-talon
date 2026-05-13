@@ -37,14 +37,14 @@ brightness set <number>: user.system_command("ddcutil setvcp 10 {number}")
 reset hub: user.system_command("sudo reset-tobii-hub")
 reset toby: user.reset_tobii()
 
-[mouse] nudge right [<number>]: mouse_nudge(number or 10, 0)
-[mouse] nudge left [<number>]:
+[mouse] bump right [<number>]: mouse_nudge(number or 10, 0)
+[mouse] bump left [<number>]:
     number = number or 10
     mouse_nudge(-1*number, 0)
-[mouse] nudge up [<number>]:
+[mouse] bump up [<number>]:
     number = number or 10
     mouse_nudge(0, -1*number)
-[mouse] nudge down [<number>]: mouse_nudge(0, number or 10)
+[mouse] bump down [<number>]: mouse_nudge(0, number or 10)
 
 # deck(pedal_left): key(q)
 # face(smile): key(enter)

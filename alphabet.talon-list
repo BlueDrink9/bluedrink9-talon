@@ -42,7 +42,6 @@ bill: b
 cap: c
 cave: c
 drum: d
-dump: d
 dave: d
 # Etch is picked up more reliably, but keep both e
 each: e
@@ -79,6 +78,7 @@ quench: q
 quest: q
 # red: r
 ray: r
+rev: r
 sun: s
 trap: t
 tee: t
