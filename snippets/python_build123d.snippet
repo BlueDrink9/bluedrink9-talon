@@ -243,7 +243,7 @@ name: build plane offset
 phrase: build plane offset
 insertionScope: statement
 -
-Plane.${1|XY,XZ,YZ|}.offset(${0:0})
+Plane.${1|XY,XZ,YZ,ZX,ZY|}.offset(${0:0})
 
 ---
 
@@ -292,5 +292,78 @@ phrase: build mode replace
 insertionScope: statement
 -
 mode=Mode.REPLACE
+
+---
+
+name: build axis X
+phrase: build axis ex
+insertionScope: statement
+-
+Axis.X
+
+---
+
+name: build axis Y
+phrase: build axis why
+insertionScope: statement
+-
+Axis.Y
+
+---
+
+name: build axis Z
+phrase: build axis zed
+insertionScope: statement
+-
+Axis.Z
+
+---
+
+name: build plane XY
+phrase: build plane ex why
+insertionScope: statement
+-
+Plane.XY
+
+---
+
+name: build plane YX
+phrase: build plane why ex
+insertionScope: statement
+-
+Plane.YX
+
+---
+
+name: build plane XZ
+phrase: build plane ex zed
+insertionScope: statement
+-
+Plane.XZ
+
+---
+
+name: build plane ZX
+phrase: build plane zed ex
+insertionScope: statement
+-
+Plane.ZX
+
+---
+
+name: build plane ZY
+phrase: build plane zed why
+insertionScope: statement
+-
+Plane.ZY
+
+---
+
+
+name: build plane YZ
+phrase: build plane why zed
+insertionScope: statement
+-
+Plane.YZ
 
 ---
