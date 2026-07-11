@@ -1,6 +1,39 @@
 language: python
 ---
 
+name: build template with imports
+phrase: build template
+insertionScope: statement
+-
+# pylint: disable=f403, f405, wildcard-import, undefined-variable
+# %%
+import b123d_positioning
+from build123d import *
+import build123d as bd
+from ocp_vscode import *
+
+from pathlib import Path
+# ocp.set_defaults(reset_camera=ocp.Camera.KEEP)
+set_port(3939)
+
+# %%
+
+w=190
+h=35
+d=2
+
+whole =  extrude(base, amount=d)
+
+
+show(whole, reset_camera=Camera.KEEP)
+
+# %%
+
+script_dir = Path(__file__).parent
+export_stl(whole, script_dir / "../stl" / Path(__file__).with_suffix(".stl").name)
+
+---
+
 name: build part
 phrase: build part
 insertionScope: statement
