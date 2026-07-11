@@ -30,7 +30,9 @@ show(whole, reset_camera=Camera.KEEP)
 # %%
 
 script_dir = Path(__file__).parent
-export_stl(whole, script_dir / "../stl" / Path(__file__).with_suffix(".stl").name)
+filename = (script_dir / "../stl" / Path(__file__).with_suffix(".stl").name).resolve()
+print("outputting stl to " + str(filename))
+export_stl(whole.part, filename)
 
 ---
 
@@ -38,7 +40,7 @@ name: build part
 phrase: build part
 insertionScope: statement
 -
-with BuildPart() as p${1}:
+with BuildPart() as ${1:p}:
     ${0}
 
 ---
@@ -47,16 +49,16 @@ name: build sketch
 phrase: build sketch
 insertionScope: statement
 -
-with BuildSketch(${1}) as s${2}:
+with BuildSketch(${1}) as ${2:s}:
     ${0}
 
 ---
 
 name: build sketch and extrude
-phrase: build sketch and extrude
+phrase: build sketch extrude
 insertionScope: statement
 -
-with BuildSketch(${1}) as s${2}:
+with BuildSketch(${1}) as ${2:s}:
     ${0}
 extrude(amount=${3})
 
@@ -66,7 +68,7 @@ name: build line
 phrase: build line
 insertionScope: statement
 -
-with BuildLine(${1}) as l${2}:
+with BuildLine(${1}) as ${2:l}:
     ${0}
 
 ---
