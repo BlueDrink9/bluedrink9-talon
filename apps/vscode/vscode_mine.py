@@ -23,7 +23,6 @@ class LinuxUserActions:
 class Actions:
     def terminal_send(sequence: str):
         """Send a sequence to the vscode terminal, bypassing vscode shortcut handling etc."""
-        # Send ctrl f, mapped to fzf command
         actions.user.run_rpc_command("workbench.action.terminal.sendSequence", {"text": sequence})
 
     def get_repl_runner() -> str:
