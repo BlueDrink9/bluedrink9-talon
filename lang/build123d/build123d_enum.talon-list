@@ -1,0 +1,111 @@
+list: user.build123d_enum
+-
+# Axis
+axis ex: Axis.X
+axis why: Axis.Y
+axis zee: Axis.Z
+axis zed: Axis.Z
+
+# Plane
+plane ex why: Plane.XY
+plane ex zee | plane ex zed: Plane.XZ
+plane why zee | plane why zed: Plane.YZ
+plane zee ex | plane zed ex: Plane.ZX
+plane zee why | plane zed why: Plane.ZY
+plane why ex: Plane.YX
+
+# Align
+align min: Align.MIN
+align max: Align.MAX
+align centre: Align.CENTER
+align none: Align.NONE
+align nun: Align.NONE
+
+# Mode
+mode add: Mode.ADD
+mode subtract: Mode.SUBTRACT
+mode intersect: Mode.INTERSECT
+mode replace: Mode.REPLACE
+mode private: Mode.PRIVATE
+
+# Select
+select dot all: Select.ALL
+select dot last: Select.LAST
+select dot new: Select.NEW
+
+# Keep
+keep all: Keep.ALL
+keep both: Keep.BOTH
+keep bottom: Keep.BOTTOM
+keep top: Keep.TOP
+keep inside: Keep.INSIDE
+keep outside: Keep.OUTSIDE
+
+# Kind
+kind arc: Kind.ARC
+kind intersection: Kind.INTERSECTION
+kind tangent: Kind.TANGENT
+
+# Until
+until first: Until.FIRST
+until last: Until.LAST
+until next: Until.NEXT
+until previous: Until.PREVIOUS
+
+# Transition
+transition right: Transition.RIGHT
+transition round: Transition.ROUND
+transition transformed: Transition.TRANSFORMED
+
+# CenterOf
+center of bounding box: CenterOf.BOUNDING_BOX
+center of geometry: CenterOf.GEOMETRY
+center of mass: CenterOf.MASS
+
+# SortBy
+sort by area: SortBy.AREA
+sort by distance: SortBy.DISTANCE
+sort by length: SortBy.LENGTH
+sort by radius: SortBy.RADIUS
+sort by volume: SortBy.VOLUME
+
+# FontStyle
+font style bold: FontStyle.BOLD
+font style italic: FontStyle.ITALIC
+font style bold italic: FontStyle.BOLDITALIC
+font style regular: FontStyle.REGULAR
+
+# GeomType
+geom type plane: GeomType.PLANE
+geom type cylinder: GeomType.CYLINDER
+geom type cone: GeomType.CONE
+geom type sphere: GeomType.SPHERE
+geom type torus: GeomType.TORUS
+geom type line: GeomType.LINE
+geom type circle: GeomType.CIRCLE
+geom type ellipse: GeomType.ELLIPSE
+geom type bezier: GeomType.BEZIER
+geom type bee spline: GeomType.BSPLINE
+geom type extrusion: GeomType.EXTRUSION
+geom type revolution: GeomType.REVOLUTION
+geom type offset: GeomType.OFFSET
+
+# Side
+side left: Side.LEFT
+side right: Side.RIGHT
+side both: Side.BOTH
+
+# PositionMode
+position mode absolute: PositionMode.ABSOLUTE
+position mode relative: PositionMode.RELATIVE
+
+# Unit
+unit millimeter: Unit.MM
+unit inch: Unit.IN
+unit centimeter: Unit.CM
+unit meter: Unit.M
+
+concave: Convexity.CONCAVE
+convex: Convexity.CONVEX
+smooth: Convexity.SMOOTH
+saddle: Convexity.SADDLE

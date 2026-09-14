@@ -93,8 +93,3 @@ split flip: user.run_rpc_command("workbench.action.toggleEditorGroupLayout")
 split clear: user.run_rpc_command("workbench.action.joinTwoGroups")
 split solo: user.run_rpc_command("workbench.action.editorLayoutSingle")
 maximize: user.run_rpc_command("workbench.action.toggleEditorWidths")
-
-debug build show all:
-    user.run_rpc_command("workbench.debug.action.focusRepl")
-    insert("show_all()")
-    key(enter)

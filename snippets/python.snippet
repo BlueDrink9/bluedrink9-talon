@@ -35,3 +35,11 @@ insertionScope: statement
 -
 logger.critical("$0")
 ---
+
+name: if main guard
+phrase: main
+insertionScope: statement
+-
+if __name__ == "__main__":
+    $0
+---

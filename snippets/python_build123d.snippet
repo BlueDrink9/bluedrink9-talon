@@ -115,6 +115,20 @@ with HexLocations(${1}):
 
 ---
 
+name: build sort
+phrase: build sort
+insertionScope: statement
+-
+.sort_by($1)
+---
+
+name: build filter
+phrase: build filter
+insertionScope: statement
+-
+.filter_by($1)
+---
+
 name: build center
 phrase: build center
 insertionScope: statement

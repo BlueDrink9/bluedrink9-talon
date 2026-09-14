@@ -1,0 +1,88 @@
+list: user.build123d_function
+-
+# 3D Primitives
+build box | cube: Box
+cylinder: Cylinder
+sphere: Sphere
+cone: Cone
+torus: Torus
+wedge: Wedge
+
+# 2D Objects (BuildSketch)
+circle: Circle
+ellipse: Ellipse
+rectangle: Rectangle
+polygon: Polygon
+regular polygon: RegularPolygon
+slot center to center: SlotCenterToCenter
+slot center length: SlotCenterLength
+slot overall: SlotOverall
+text: Text
+trapezoid: Trapezoid
+
+# 1D Curves & Lines (BuildLine)
+line: Line
+poly line: Polyline
+polyline: Polyline
+spline: Spline
+bezier: Bezier
+arc: Arc
+three point arc: ThreePointArc
+tangent arc: TangentArc
+center arc: CenterArc
+elliptical arc: EllipticalArc
+fillet polyline: FilletPolyline
+
+# 3D & 2D Operations
+extrude: extrude
+revolve: revolve
+loft: loft
+sweep: sweep
+offset: offset
+thick solid: thick_solid
+project: project
+make face: make_face
+make hull: make_hull
+fillet: fillet
+fill it: fillet
+chamfer: chamfer
+split: split
+mirror: mirror
+scale: scale
+rotate: rotate
+translate: translate
+
+# Builder Contexts
+build part: BuildPart
+build sketch: BuildSketch
+build line: BuildLine
+plane: Plane
+plain: Plane
+
+# Locations & Positioning
+locations: Locations
+grid locations: GridLocations
+polar locations: PolarLocations
+hex locations: HexLocations
+location: Location
+
+bounding box: bounding_box
+
+sort by: sort_by
+filter by: filter_by
+group by: group_by
+toppo distance to: topo_distance_to
+to local coordinates: to_local_coords
+
+shift origin: shift_origin
+make face: make_face
+located
+moved
+rotated
+
+edges
+vertices
+faces
+wire
+
+center
