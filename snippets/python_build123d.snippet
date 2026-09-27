@@ -24,15 +24,23 @@ d=2
 
 whole =  extrude(base, amount=d)
 
-
-show(whole, reset_camera=Camera.KEEP)
+script_dir = Path(__file__).parent
+models = {
+    Path(__file__).name: whole,
+}
+show(*models.values(), reset_camera=Camera.KEEP)
 
 # %%
 
-script_dir = Path(__file__).parent
-filename = (script_dir / "../stl" / Path(__file__).with_suffix(".stl").name).resolve()
-print("outputting stl to " + str(filename))
-export_stl(whole.part, filename)
+if __name__ == "__main__":
+    dir = (script_dir / "exported").resolve()
+    for name, model in models.items():
+        filename = dir / f"{name}.step"
+        print(f"Exporting STEP to {filename}")
+        export_step(model, filename)
+        filename = dir / f"{name}.stl"
+        print(f"Exporting stl to {filename}")
+        export_stl(model, filename)
 
 ---
 
