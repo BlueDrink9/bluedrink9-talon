@@ -33,7 +33,7 @@ break point <user.cursorless_target>:
     user.cursorless_ide_command("editor.action.quickFix", cursorless_target)
 
 # Evaluate in debug console
-bug run <user.cursorless_target> | buggy <user.cursorless_target>:
+bug run <user.cursorless_target> | bug <user.cursorless_target>:
     user.cursorless_ide_command("editor.debug.action.selectionToRepl", cursorless_target)
 
 # Evaluate in terminal
