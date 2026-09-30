@@ -168,7 +168,7 @@ parrot_patterns = {
         "sounds": ["whistle"],
         "threshold": {">probability": 0.95},
        "throttle": {"whistle": 0.3},
-       "detect_after": 0.1,
+       "detect_after": 0.005,
     },
 
     # "palate_click": {
