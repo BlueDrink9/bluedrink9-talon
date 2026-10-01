@@ -32,6 +32,7 @@ tangent arc: TangentArc
 center arc: CenterArc
 elliptical arc: EllipticalArc
 fillet polyline: FilletPolyline
+sagitta: SagittaArc
 
 # 3D & 2D Operations
 extrude: extrude

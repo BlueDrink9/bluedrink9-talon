@@ -3,16 +3,15 @@ list: user.build123d_enum
 # Axis
 axis ex: Axis.X
 axis why: Axis.Y
-axis zee: Axis.Z
-axis zed: Axis.Z
+axis Z: Axis.Z
 
 # Plane
+plane why ex: Plane.YX
 plane ex why: Plane.XY
 plane ex zee | plane ex zed: Plane.XZ
 plane why zee | plane why zed: Plane.YZ
 plane zee ex | plane zed ex: Plane.ZX
 plane zee why | plane zed why: Plane.ZY
-plane why ex: Plane.YX
 
 # Align
 align min: Align.MIN

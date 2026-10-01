@@ -10,3 +10,15 @@ show all:
     user.run_rpc_command("workbench.debug.action.focusRepl")
     insert("show_all()")
     key(enter)
+
+origin: "(0, 0, 0)"
+origin two: "(0, 0)"
+direction zed: "(0, 0, 1)"
+direction ex: "(1, 0, 0)"
+direction why: "(0, 1, 0)"
+direction minus zed: "(0, 0, -1)"
+direction minus ex: "(-1, 0, 0)"
+direction minus why: "(0, -1, 0)"
+
+op at: " @ "
+op tangent: " % "
