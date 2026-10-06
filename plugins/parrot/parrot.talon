@@ -10,9 +10,13 @@ parrot(kiss):
     key("enter")
 
 parrot(cluck):
+    do_zoom = tracking.control_zoom_enabled()
+    tracking.control_zoom_toggle(false)
 	print("cluck")
-    tracking.zoom_cancel()
     edit.undo()
+    sleep(150ms)
+    tracking.zoom_cancel()
+    tracking.control_zoom_toggle(do_zoom)
 
 parrot(pop):
 	print("pop")
@@ -65,8 +69,9 @@ parrot(unvoiced_th:stop):
 
 parrot(lip_buzz):
 	print("buzz")
+    toggle_control = user.not_(tracking.control_zoom_enabled())
     tracking.zoom_cancel()
-	tracking.control_toggle()
+	if toggle_control: tracking.control_toggle()
 
 parrot(falsetto_squeak):
     print("squeak")
