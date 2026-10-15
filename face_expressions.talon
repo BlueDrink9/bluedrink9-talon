@@ -11,6 +11,16 @@ face(smile:repeat):
     mouse_scroll(-1, 0, true)
     sleep(0.1)
 
+face(pucker_lips_right):
+    user.mouse_scroll_down_continuous(10)
+face(pucker_lips_right:stop):
+    user.mouse_scroll_stop()
+
+ face(pucker_lips_left):
+     user.mouse_scroll_up_continuous(10)
+ face(pucker_lips_left:stop):
+     user.mouse_scroll_stop()
+
 
 face(blink): print("blink")
 # The left and right recognition seems backwards for mouth stretch
