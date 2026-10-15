@@ -6,13 +6,8 @@
 face on: mode.enable("user.my_face")
 face off: mode.disable("user.my_face")
 
-send (that|it): insert(" ss")
-
-send selection: insert(" s")
-
 beat: sleep(1)
 
-tut: ""
 tuss: ""
 
 choose yes: key(alt-y)
@@ -23,7 +18,7 @@ big clap: key(ctrl-enter)
 clapper: key(ctrl-enter)
 pinger: key(ctrl-enter)
 
-cody |coda | coder: user.switcher_focus("Codium")
+cody |coda | coder: user.switcher_focus("codium")
 foxy: user.switcher_focus("firefox")
 kitty: user.switcher_focus("kitty")
 
